@@ -106,12 +106,20 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 </div></section>
 
 <section><div class="wrap">
-<h2>The LiDAR sensor model</h2><p class="sub">The scan is a procedural shader, not ray-cast geometry. These values are read from the <span class="mono">LiDAR Wave</span> node group in <span class="mono">LiDAR_Pass</span> (<a href="data/lidar_params.json">lidar_params.json</a>).</p>
+<h2>The LiDAR sensor model</h2><p class="sub">The on-screen scan look is a procedural shader. These values are read from the <span class="mono">LiDAR Wave</span> node group in <span class="mono">LiDAR_Pass</span> (<a href="data/lidar_params.json">lidar_params.json</a>).</p>
 <table id="lt"></table></div></section>
 
 <section><div class="wrap">
+<h2>Real LiDAR point cloud</h2>
+<p class="sub">The shader above is only a look. To get actual data, the sensor's own rays (480 &times; 40, &minus;38&deg; to +14&deg;, 14 m) were cast against the scene geometry at 171 frames along the robot path, hits merged into one cloud and voxel-filtered. Colour is height, brightness is incidence angle, the green line is the sensor path.</p>
+<figure class="fig"><video autoplay muted loop playsinline controls poster="media/stills/pointcloud_oblique.jpg" src="media/pointcloud_orbit.mp4"></video><figcaption>360&deg; orbit around the accumulated scan</figcaption></figure>
+<div class="stats" id="pcstats" style="margin-top:16px"></div>
+<p class="sub" style="margin-top:16px">Method notes: each sampled frame is a full 360&deg; snapshot ring, not a rotating sweep. The robot's own meshes are hidden so beams do not hit it. The room is closed, so every ray hits something; real sensors lose returns on glass, dark or distant surfaces and add noise, none of which is modelled. Data: <a href="data/pointcloud_stats.json">pointcloud_stats.json</a>. The PLY itself is generated locally by <span class="mono">tools/lidar_raycast.py</span> and <span class="mono">tools/pointcloud_orbit.py</span> and is not in the repo because it is sampled from NVIDIA's scene geometry.</p>
+</div></section>
+
+<section><div class="wrap">
 <h2>SLAM</h2>
-<p class="honest">No SLAM was run for this demo, so there is no SLAM trajectory, map or error figure here. What exists is the ground-truth robot path above (exact, from the animation) and five AprilTags in the scene (ids 14, 15, 16, 18, 19) that a SLAM or tag-based localisation test could use. The next step would be to feed the Scan_Camera frames to a tracker and compare its trajectory against <span class="mono">robot_path.csv</span>.</p></div></section>
+<p class="honest">No SLAM was run for this demo, so there is no SLAM trajectory, map or error figure here. What exists is the ground-truth robot path above (exact, from the animation) and five AprilTags in the scene (ids 14, 15, 16, 18, 19) that a SLAM or tag-based localisation test could use. The next step would be to run scan matching or visual tracking on the point-cloud scans or the Scan_Camera frames and compare the estimated trajectory against <span class="mono">robot_path.csv</span>.</p></div></section>
 
 <section><div class="wrap">
 <h2>Gallery</h2><p class="sub">Click any frame to enlarge.</p>
@@ -134,7 +142,7 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 <div><b>Paint the scan</b>A second view layer, <span class="mono">LiDAR</span>, forces the <span class="mono">LiDAR_Pass</span> material on everything. Its shader turns distance and angle from the sensor into a ring-and-dot pattern: 480 &times; 40 returns, 14 m range, 14&deg; up and 38&deg; down, with a 140&deg; trailing glow behind the sweep.</div>
 <div><b>Render</b>Cycles with the OptiX denoiser on an RTX 4070 Ti. Each clip frame is rendered once per camera and layer, then encoded to MP4 and GIF with ffmpeg. Clips use every 8th frame (86 frames at 12 fps), so they play faster than real time.</div>
 </div>
-<p class="honest" style="margin-top:24px"><b>Honest labels.</b> A Blender render of the Isaac warehouse with an animated LiDAR visualisation. Not an Isaac Sim sensor run and no point cloud. 54 source textures lived on an Omniverse Nucleus server and were not localised, so those materials fall back to constants. Clip frames were rendered at 12 samples for speed.</p>
+<p class="honest" style="margin-top:24px"><b>Honest labels.</b> A Blender render of the Isaac warehouse with an animated LiDAR visualisation. Not an Isaac Sim sensor run. The point cloud comes from Blender ray casts, not Isaac's RTX LiDAR. 54 source textures lived on an Omniverse Nucleus server and were not localised, so those materials fall back to constants. Clip frames were rendered at 12 samples for speed.</p>
 </div></section>
 
 <footer><div class="wrap">NVIDIA warehouse assets and textures are not included in this repo and keep their own licence.</div></footer>
@@ -142,7 +150,8 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 <script>
 const D=__DATA__, T=__TEMPL__, G=__GAL__;
 const $=s=>document.querySelector(s);
-const M=__MET__, L=__LID__;
+const M=__MET__, L=__LID__, PC=__PC__;
+$("#pcstats").innerHTML=[["scans",PC.scans],["raw points",(PC.raw_points/1e6).toFixed(2)+"M"],["after "+(PC.voxel_m*100)+" cm voxels",(PC.points_after_voxel/1e3).toFixed(0)+"k"],["mean range",PC.mean_range_m+" m"],["max range",PC.max_range_m+" m"],["room extent",PC.extent_m.join(" x ")+" m"],["hit rate",(PC.mean_hit_rate*100).toFixed(0)+"%"],["PLY size",PC.ply_mb+" MB"]].map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
 $("#mstats").innerHTML=[["path length",M.path_length_m+" m"],["duration",M.duration_s+" s"],["mean speed",M.mean_speed_mps+" m/s"],["max speed",M.max_speed_mps+" m/s"],["route extent",M.extent_m[1]+" x "+M.extent_m[0]+" m"],["net displacement",M.net_displacement_m+" m"],["total rotation",M.yaw_total_rotation_deg+"\u00b0"],["stops",M.stops.length]].map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
 $("#lt").innerHTML=[["Max range",L.max_range_m+" m (fade from "+L.range_fade_start_m+" m)"],["Vertical FOV","+"+L.fov_up_deg+"\u00b0 / -"+L.fov_down_deg+"\u00b0"],["Returns",L.azimuth_divisions+" azimuth x "+L.elevation_divisions+" elevation"],["Beam width",L.beam_width_deg+"\u00b0"],["Trail",L.trail_angle_deg+"\u00b0 glow, x"+L.trail_boost+" (beam x"+L.beam_boost+")"],["Dot duty / fade",L.dot_duty+" / "+L.dot_fade_m[0]+"-"+L.dot_fade_m[1]+" m"],["Exposure",L.exposure],["Scan camera",L.camera.type+" "+L.camera.fisheye+", "+L.camera.lens.toFixed(1)+" mm, "+L.render.res.join("x")+" source"],["Sensor mount","parented to robot, "+M.sensor_xy_offset_m[0]+" m off centre, "+M.sensor_height_above_robot_m+" m up"]].map(([k,v])=>`<tr><td>${k}</td><td class="mono">${v}</td></tr>`).join("");
 (()=>{const sp=M.speed_series,cu=M.cum_series,n=sp.length,W=900,H=220,pl=44,pb=26,mxs=Math.max(...sp)*1.15,mxc=Math.max(...cu);
@@ -174,13 +183,15 @@ def build() -> None:
         gal.append([f"media/stills/{name}.jpg", cap])
     metrics = json.loads((ROOT / "data" / "metrics.json").read_text())
     lidar = json.loads((ROOT / "data" / "lidar_params.json").read_text())
+    pc = json.loads((ROOT / "data" / "pointcloud_stats.json").read_text())
     html = (HTML.replace("__DATA__", json.dumps(data))
                 .replace("__TEMPL__", json.dumps(TEMPLATES))
                 .replace("__GAL__", json.dumps(gal))
                 .replace("__MET__", json.dumps(metrics))
-                .replace("__LID__", json.dumps(lidar)))
+                .replace("__LID__", json.dumps(lidar))
+                .replace("__PC__", json.dumps({k: v for k, v in pc.items() if k != "per_scan"})))
     (DOCS / "data").mkdir(exist_ok=True)
-    for n in ("robot_path.csv", "metrics.json", "lidar_params.json", "scene_stats.json", "report.txt"):
+    for n in ("robot_path.csv", "metrics.json", "lidar_params.json", "scene_stats.json", "pointcloud_stats.json", "report.txt"):
         (DOCS / "data" / n).write_bytes((ROOT / "data" / n).read_bytes())
     (DOCS / "index.html").write_text(html, encoding="utf-8")
     log.info("wrote docs/index.html (%d gallery items)", len(gal))

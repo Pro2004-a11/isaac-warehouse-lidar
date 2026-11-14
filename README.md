@@ -39,9 +39,27 @@ Full-quality clips: [aisle](docs/media/aisle.mp4) · [top-down follow](docs/medi
 
 The reversal is an animation keyframe step, not a physical turn. Per-frame data: [`data/robot_path.csv`](data/robot_path.csv), [`data/metrics.json`](data/metrics.json).
 
+## Real LiDAR point cloud
+
+![360 orbit of the LiDAR point cloud](docs/media/pointcloud_orbit.gif)
+
+[Full-quality orbit (MP4)](docs/media/pointcloud_orbit.mp4)
+
+The sensor's own rays (480 x 40, -38 to +14 deg, 14 m) were cast against the scene geometry at 171 frames (every 4th, frames 120-800) with Blender's `ray_cast`. Colour = height, brightness = incidence angle, green line = sensor path.
+
+| Metric | Value |
+|---|---|
+| Scans x rays | 171 x 19,200 |
+| Raw points | 3,283,200 |
+| After 2 cm voxel filter | 241,821 |
+| Mean / max range | 1.22 m / 9.90 m |
+| Room extent | 6.10 x 11.42 x 2.59 m |
+
+Caveats: each scan is a full 360 deg snapshot ring, not a rotating sweep; the robot's own meshes are hidden; the room is closed so the hit rate is 100% and there is no noise, dropout or glass. The PLY (4.6 MB) is generated locally by `tools/lidar_raycast.py` + `tools/pointcloud_orbit.py` and is **not committed**, because it is sampled from NVIDIA's scene geometry. Stats: [`data/pointcloud_stats.json`](data/pointcloud_stats.json).
+
 ## LiDAR sensor model
 
-A procedural shader (`LiDAR Wave` node group in the `LiDAR_Pass` material, forced on a dedicated `LiDAR` view layer), not ray-cast geometry. Values in [`data/lidar_params.json`](data/lidar_params.json).
+The look comes from a procedural shader (`LiDAR Wave` node group in the `LiDAR_Pass` material, forced on a dedicated `LiDAR` view layer). Values in [`data/lidar_params.json`](data/lidar_params.json).
 
 | Parameter | Value |
 |---|---|
@@ -69,7 +87,7 @@ A procedural shader (`LiDAR Wave` node group in the `LiDAR_Pass` material, force
 
 ## Honest scope
 
-A Blender render of the Isaac warehouse with a LiDAR *visualisation*. Not an Isaac Sim sensor run, no point-cloud output. **No SLAM was run**; `data/robot_path.csv` is the ground-truth path a SLAM test could be scored against. 54 source textures lived on an Omniverse Nucleus server and were not localised, so those materials fall back to constants.
+A Blender render of the Isaac warehouse with a LiDAR visualisation, plus a point cloud from Blender ray casts. Not an Isaac Sim sensor run (no Isaac RTX LiDAR). **No SLAM was run**; `data/robot_path.csv` is the ground-truth path and the point-cloud scans are the input a SLAM test could use. 54 source textures lived on an Omniverse Nucleus server and were not localised, so those materials fall back to constants.
 
 ## Not in this repo
 
@@ -82,6 +100,8 @@ blender -b warehouse2_Lidar.blend --python tools/extract_run_data.py -- data/_ra
 python tools/compute_metrics.py            # robot_path.csv, metrics.json, lidar_params.json
 blender -b warehouse2_Lidar.blend --python tools/render_media.py -- frames 8 12
 python tools/encode_media.py frames 12     # MP4s and GIFs into docs/media
+blender -b warehouse2_Lidar.blend --python tools/lidar_raycast.py -- out/lidar_raw.npz 4   # ~22 min
+python tools/pointcloud_orbit.py out/lidar_raw.npz   # PLY (local), orbit MP4/GIF, pointcloud_stats.json
 python tools/build_page.py                 # docs/index.html
 python tools/check_site.py                 # CI link check
 ```
