@@ -1,0 +1,218 @@
+ISAAC SIM -> BLENDER EXPORT REPORT
+============================================================
+materials converted     : 101
+  with >=1 texture      : 63
+  constants only        : 38
+left as authored        : 15
+assets collected        : 88 (0 copy failures)
+assets unresolvable     : 54
+
+by graph template:
+     73  omni_pbr
+     12  constant
+      5  ue4_basic
+      5  ue4_mask_lerp
+      3  ue4_desat_tint
+      2  ue4_color_mask4
+      1  ue4_emissive_from_orm_alpha
+
+DUPLICATE material names (Blender will suffix .001, .002 ...):
+     12  decal
+      6  M_FlatBox_Cardboard_01
+      6  tag
+      5  decal_wrap
+      3  Plastic_Rough_Black_A
+      3  M_MultiDepthBox_Decal_01
+      3  M_MultiDepthBox_Cardboard_01
+      3  decal_logo
+      2  Plywood
+      2  MaterialInstanceDynamic_6801
+      2  FOF_Mesh_LabelsSG
+      2  FOF_Mesh_StickerSG
+      2  FOF_Mesh_Magenta_BoxSG
+      2  Plastic_White_A
+      2  dgx_station
+      2  nvidia
+      2  MI_RackSetC_01
+      2  Tape_Stripes
+      2  Tape_Stripes_Horiz
+
+ASSETS NOT ON DISK (54) -- these live on an Omniverse
+Nucleus server and were never localised by the original Collect:
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Concrete_Polished_BaseColor.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Concrete_Polished_Normal.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Concrete_Polished_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/FlatWhite.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Gold_BaseColor.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Gold_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Paint_Satin_Finish_BaseColor.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Paint_Satin_Finish_N.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/Paint_Satin_Finish_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_FlatBox_A01_Tile_Albedo.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_FlatBox_A01_Tile_Normal.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_FlatBox_A01_Tile_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_Metal_triplanar_Roughness.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Tile_Albedo.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Tile_Normal.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Tile_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Trim_Albedo.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Trim_Normal.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Trim_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_MultiDepthBox_A01_Trim_Opacity.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_Plastic_Black_A_Albedo.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_Plastic_Black_A_Normal.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_Plastic_Black_A_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_Plastic_ORM.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_WoodenCrates_B1_Albedo.1001.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_WoodenCrates_B1_Normal.1001.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_WoodenCrates_B1_ORM.1001.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/Digital_Twin_Warehouse/Collected_World0/SubUSDs/textures/T_bump_noise.png
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shipping/Cardboard_Boxes/Flat_A/materials/M_FlatBox_Cardboard_01.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shipping/Cardboard_Boxes/Multi-Depth_A/materials/M_MultiDepthBox_Cardboard_01.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Assets/Warehouse/Shipping/Cardboard_Boxes/Multi-Depth_A/materials/M_MultiDepthBox_Decal_01.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Metals/Copper_D.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Metals/Gold_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Metals/Gold_D.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Metals/Metal_Glossy_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Black_C.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_Rough_Black_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Plastics/Plastic_White_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Base/Wood/Wood_Recycled_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Datacenter/DGX_Gold_Matte_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Datacenter/DGX_Gold_Mesh_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Assets/DigitalTwin/Materials/Datacenter/DGX_Gold_Shiny_A.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Glass/Clear_Glass.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Masonry/Concrete_Polished.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Metals/Aluminum_Anodized_Black.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Metals/Aluminum_Polished.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Miscellaneous/Chain_Link_Fence.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Miscellaneous/Paint_Gloss.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Miscellaneous/Paint_Satin.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Plastics/Plastic.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Plastics/Plastic_Acrylic.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Wood/Oak_Planks.mdl
+  D:/Isaac-sim/Assets/Isaac/5.0/Isaac/Environments/NVIDIA/Materials/Base/Wood/Plywood.mdl
+  OmniPBR.mdl
+
+MATERIALS NEEDING ATTENTION (31):
+  [Concrete_Polished] Concrete_Polished
+      - diffuse_color_constant [1.0, 1.0, 1.0] ignored: it sits behind a texture that is not on disk, so it is dead data in the source
+      - project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/Concrete_Polished_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/Concrete_Polished_BaseColor.png
+      - usd texture unresolved: normalmap_texture -> ./textures/Concrete_Polished_Normal.png
+  [Chain_Link_Fence] Chain_Link_Fence
+      - project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs
+      - no texture resolved; constants only
+      - override: opacity <- chainlink_alpha.png
+  [Chain_Link_Fence] Metal_Grid
+      - project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs
+      - no texture resolved; constants only
+  [Paint_Satin] Satin_Paint_Gray
+      - diffuse_color_constant [1.0, 0.0, 0.0] ignored: it sits behind a texture that is not on disk, so it is dead data in the source
+      - project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/Paint_Satin_Finish_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/Paint_Satin_Finish_BaseColor.png
+      - usd texture unresolved: normalmap_texture -> ./textures/Paint_Satin_Finish_N.png
+  [OmniPBR] Cone_Red
+      - no texture resolved; constants only
+  [Concrete_Polished] Purple_Bin
+      - no texture resolved; constants only
+  [Plywood] Plywood
+      - no texture resolved; constants only
+  [Plastic_Rough_Black_A] Plastic_Rough_Black_A
+      - no texture resolved; constants only
+  [OmniPBR] decal_wrap
+      - CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.
+  [M_MultiDepthBox_Decal_01] M_MultiDepthBox_Decal_01
+      - CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Trim_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Trim_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Trim_Normal.png
+      - usd texture unresolved: opacity_texture -> ./textures/T_MultiDepthBox_A01_Trim_Opacity.png
+  [M_MultiDepthBox_Cardboard_01] M_MultiDepthBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Tile_Normal.png
+  [M_FlatBox_Cardboard_01] M_FlatBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png
+  [M_FlatBox_Cardboard_01] M_FlatBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png
+  [OmniPBR] decal
+      - CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.
+  [M_FlatBox_Cardboard_01] M_FlatBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png
+  [M_FlatBox_Cardboard_01] M_FlatBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png
+  [M_FlatBox_Cardboard_01] M_FlatBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png
+  [M_FlatBox_Cardboard_01] M_FlatBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png
+  [OmniPBR] decal
+      - CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.
+  [M_MultiDepthBox_Decal_01] M_MultiDepthBox_Decal_01
+      - CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Trim_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Trim_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Trim_Normal.png
+      - usd texture unresolved: opacity_texture -> ./textures/T_MultiDepthBox_A01_Trim_Opacity.png
+  [M_MultiDepthBox_Cardboard_01] M_MultiDepthBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Tile_Normal.png
+  [M_MultiDepthBox_Decal_01] M_MultiDepthBox_Decal_01
+      - CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Trim_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Trim_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Trim_Normal.png
+      - usd texture unresolved: opacity_texture -> ./textures/T_MultiDepthBox_A01_Trim_Opacity.png
+  [M_MultiDepthBox_Cardboard_01] M_MultiDepthBox_Cardboard_01
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Tile_ORM.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Tile_Albedo.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Tile_Normal.png
+  [OmniPBR] PlywoodCrate_B
+      - no texture resolved; constants only
+      - usd texture unresolved: ORM_texture -> ./textures/T_WoodenCrates_B1_ORM.1001.png
+      - usd texture unresolved: diffuse_texture -> ./textures/T_WoodenCrates_B1_Albedo.1001.png
+      - usd texture unresolved: normalmap_texture -> ./textures/T_WoodenCrates_B1_Normal.1001.png
+  [M_TrafficCone] M_TrafficCone
+      - emissive dropped: MDL drives it from a fresnel rim hack that does not survive translation
+  [Plastic_Rough_Black_A] Plastic_Rough_Black_A
+      - no texture resolved; constants only
+  [Plastic_White_A] Plastic_White_A
+      - no texture resolved; constants only
+  [OmniPBR] White
+      - no texture resolved; constants only
+      - usd texture unresolved: diffuse_texture -> ./textures/FlatWhite.png
+  [Oak_Planks] Oak_Planks
+      - no texture resolved; constants only
+  [Oak_Planks] Oak_Planks_01
+      - no texture resolved; constants only
+  [Oak_Planks] Oak_Planks_02
+      - no texture resolved; constants only

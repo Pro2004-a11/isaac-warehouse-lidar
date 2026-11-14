@@ -1,0 +1,56 @@
+{
+ "max_range_m": 14.0,
+ "range_fade_start_m": 4.0,
+ "fov_up_deg": 14.0,
+ "fov_down_deg": 38.0,
+ "beam_width_deg": 2.5,
+ "trail_angle_deg": 140.0,
+ "azimuth_divisions": 480,
+ "elevation_divisions": 40,
+ "dot_duty": 0.36,
+ "dot_fade_m": [
+  5.0,
+  13.0
+ ],
+ "beam_boost": 8.0,
+ "trail_boost": 1.8,
+ "exposure": 2.5,
+ "camera": {
+  "lens": 21.26070213317871,
+  "type": "PANO",
+  "sensor_w": 36.0,
+  "fisheye": "FISHEYE_EQUISOLID",
+  "clip": [
+   0.10000000149011612,
+   1000.0
+  ],
+  "parent": null
+ },
+ "render": {
+  "samples": 50,
+  "res": [
+   1920,
+   1920
+  ],
+  "fps": 24
+ },
+ "raw": {
+  "Max Range": 14.0,
+  "Range Fade Start": 4.0,
+  "FOV Up": 0.2443,
+  "FOV Down": 0.6632,
+  "FOV Softness": 0.0436,
+  "Beam Width": 0.0436,
+  "Trail Angle": 2.4435,
+  "Beam Boost": 8.0,
+  "Trail Boost": 1.8,
+  "Azimuth Divisions": 480.0,
+  "Elevation Divisions": 40.0,
+  "Dot Duty": 0.36,
+  "Dot Softness": 0.2,
+  "Dot Fade Start": 5.0,
+  "Dot Fade End": 13.0,
+  "Surface Detail": 0.35,
+  "Exposure": 2.5
+ }
+}

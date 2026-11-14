@@ -17,6 +17,15 @@ DOCS = ROOT / "docs"
 TEMPLATES = [("omni_pbr", 73), ("constant", 12), ("ue4_basic", 5), ("ue4_mask_lerp", 5),
              ("ue4_desat_tint", 3), ("ue4_color_mask4", 2), ("ue4_emissive_from_orm_alpha", 1)]
 
+CURATED = [
+    ("Room_Camera_beauty_f300", "Room camera, frame 300: robot vacuum between the racks and crates"),
+    ("Aisle_Cam_beauty_f150", "Aisle camera, frame 150: far-end view down the scan route"),
+    ("Room_Camera_lidar_f300", "Same room through the LiDAR layer, frame 300"),
+    ("Room_Camera_lidar_f600", "LiDAR layer, frame 600, on the way back"),
+    ("Scan_Camera_lidar_f450", "Sensor-mounted fisheye, LiDAR layer, frame 450"),
+    ("Scan_Camera_beauty_f450", "Sensor-mounted fisheye, beauty, frame 450"),
+]
+
 HTML = r"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -57,6 +66,7 @@ h2{font-size:clamp(26px,4vw,40px);margin:0 0 8px;letter-spacing:-.02em}
 .pipe div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;counter-increment:s}
 .pipe div:before{content:"0" counter(s);color:var(--acc);font-family:ui-monospace,Consolas,monospace}
 .pipe b{display:block;margin:4px 0}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}td{padding:10px 14px;border-bottom:1px solid var(--line);font-size:14px}td:first-child{color:var(--mut);width:34%}a{color:var(--acc2)}
 .honest{border:1px dashed var(--acc);border-radius:10px;padding:16px;color:var(--mut)}
 footer{padding:40px 0;color:var(--mut);font-size:13px}
 #lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:9;cursor:zoom-out}
@@ -68,7 +78,7 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 <video autoplay muted loop playsinline poster="media/stills/Room_Camera_beauty_f300.jpg"><source src="media/lidar_room.mp4" type="video/mp4"></video>
 <div class="wrap"><div class="tag mono">Isaac Sim 5.0 → Blender 5.0 · Cycles</div>
 <h1>A robot, a warehouse,<br>and a <em>LiDAR wave</em>.</h1>
-<p class="lede">Digital Twin Warehouse exported from Isaac Sim USD to Blender with materials intact, then scanned by an animated LiDAR sensor riding a robot vacuum. Everything below is rendered from the source scene.</p></div>
+<p class="lede">Digital Twin Warehouse exported from Isaac Sim USD to Blender with materials intact, then scanned by an animated LiDAR sensor riding a robot vacuum. Every image, clip and number below comes from the source scene.</p></div>
 </header>
 
 <section><div class="wrap">
@@ -89,6 +99,21 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 <svg id="path" viewBox="0 0 520 640" role="img" aria-label="Robot path"></svg></div></section>
 
 <section><div class="wrap">
+<h2>The run, in numbers</h2><p class="sub">Computed from the per-frame robot transform (680 frames, 28.3 s at 24 fps). Raw data: <a href="data/robot_path.csv">robot_path.csv</a>, <a href="data/metrics.json">metrics.json</a>.</p>
+<div class="stats" id="mstats"></div>
+<p class="sub" style="margin-top:20px">The robot accelerates from 0.12 to 0.69 m/s over frames 120&ndash;449, reaching y = &minus;4.95 m. At frame 449 it reverses with no deceleration (speed drops from 0.69 to 0.29 m/s in one frame; this is an animation keyframe step, not a physical turn) and returns at a steady 0.29 m/s. Heading changes only 12.9&deg; over the whole run, so it reverses along one axis rather than turning round (inferred from the yaw track).</p>
+<svg id="spd" viewBox="0 0 900 220" role="img" aria-label="Speed and distance over time" style="width:100%;height:auto;background:var(--card);border:1px solid var(--line);border-radius:10px"></svg>
+</div></section>
+
+<section><div class="wrap">
+<h2>The LiDAR sensor model</h2><p class="sub">The scan is a procedural shader, not ray-cast geometry. These values are read from the <span class="mono">LiDAR Wave</span> node group in <span class="mono">LiDAR_Pass</span> (<a href="data/lidar_params.json">lidar_params.json</a>).</p>
+<table id="lt"></table></div></section>
+
+<section><div class="wrap">
+<h2>SLAM</h2>
+<p class="honest">No SLAM was run for this demo, so there is no SLAM trajectory, map or error figure here. What exists is the ground-truth robot path above (exact, from the animation) and five AprilTags in the scene (ids 14, 15, 16, 18, 19) that a SLAM or tag-based localisation test could use. The next step would be to feed the Scan_Camera frames to a tracker and compare its trajectory against <span class="mono">robot_path.csv</span>.</p></div></section>
+
+<section><div class="wrap">
 <h2>Gallery</h2><p class="sub">Click any frame to enlarge.</p>
 <div class="gal" id="gal"></div></div></section>
 
@@ -97,15 +122,19 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 <div class="bars" id="bars"></div></div></section>
 
 <section><div class="wrap">
-<h2>Pipeline</h2><p class="sub">Code in this repo: <span class="mono">tools/</span> (CLI) and <span class="mono">addon/isaac_usd_importer</span> (Blender extension).</p>
+<h2>How the demo was made</h2>
+<p class="sub">Two halves: getting Isaac Sim's warehouse into Blender without losing its look, then adding a LiDAR that looks like a LiDAR. Code for the first half is in <span class="mono">tools/</span> and <span class="mono">addon/</span>. The second half lives in the .blend, which is not in this repo.</p>
 <div class="pipe">
-<div><b>Flatten &amp; collect</b>usd_flatten_collect.py resolves the USD stage and gathers textures.</div>
-<div><b>Parse MDL</b>mdl_parse.py reads Omniverse MDL parameters into a material spec.</div>
-<div><b>Build node graphs</b>material_spec + base_materials map each template to Principled BSDF graphs.</div>
-<div><b>Import &amp; verify</b>blender_import.py, verify_export.py and render_check.py.</div>
-<div><b>Add LiDAR</b>A sensor empty parented to the robot, a render layer with the <span class="mono">LiDAR_Pass</span> material override.</div>
+<div><b>Flatten the USD</b>The warehouse is <span class="mono">World0.usd</span> from Isaac Sim 5.0 (Digital Twin Warehouse). <span class="mono">usd_flatten_collect.py</span> flattens the stage into one <span class="mono">warehouse.usdc</span> and copies every texture it can find (88 collected, 0 copy failures).</div>
+<div><b>Read the MDL materials</b>Omniverse materials are MDL. <span class="mono">mdl_parse.py</span> pulls texture paths and parameters out of the MDL files so they can be rebuilt, rather than guessed from a viewport colour.</div>
+<div><b>Map to Blender shaders</b><span class="mono">material_spec.py</span> classifies each material into a template (73 omni_pbr, 12 constant, 5 ue4_basic, 5 ue4_mask_lerp, 3 ue4_desat_tint, 2 ue4_color_mask4, 1 ue4_emissive) and <span class="mono">base_materials.py</span> builds the matching Principled BSDF graph.</div>
+<div><b>Import and patch</b><span class="mono">blender_import.py</span> (or the <span class="mono">isaac_usd_importer</span> add-on) imports geometry and applies the graphs. <span class="mono">overrides.json</span> patches what USD cannot supply, such as the chain-link fence opacity (made by <span class="mono">make_chainlink_alpha.py</span>).</div>
+<div><b>Verify</b><span class="mono">verify_export.py</span> and <span class="mono">render_check.py</span> compare the export with the source, with lit and unlit previews. Result: 101 materials converted, 63 textured, 38 constants, 15 left as authored.</div>
+<div><b>Add robot and sensor</b>A robot-vacuum model animated along the aisle (<span class="mono">robotAction</span>, frames 0&ndash;800). A <span class="mono">LiDAR_Sensor</span> empty is parented to it, with its own action from frame 120. A fisheye camera (<span class="mono">Scan_Camera</span>, equisolid, 21 mm) sits at the sensor.</div>
+<div><b>Paint the scan</b>A second view layer, <span class="mono">LiDAR</span>, forces the <span class="mono">LiDAR_Pass</span> material on everything. Its shader turns distance and angle from the sensor into a ring-and-dot pattern: 480 &times; 40 returns, 14 m range, 14&deg; up and 38&deg; down, with a 140&deg; trailing glow behind the sweep.</div>
+<div><b>Render</b>Cycles with the OptiX denoiser on an RTX 4070 Ti. Each clip frame is rendered once per camera and layer, then encoded to MP4 and GIF with ffmpeg. Clips use every 8th frame (86 frames at 12 fps), so they play faster than real time.</div>
 </div>
-<p class="honest" style="margin-top:24px"><b>Honest labels.</b> This is a Blender render of the Isaac warehouse with an animated LiDAR visualisation. It is not an Isaac Sim sensor run and produces no point cloud. 54 source textures lived on an Omniverse Nucleus server and were not localised; those materials fall back to constants.</p>
+<p class="honest" style="margin-top:24px"><b>Honest labels.</b> A Blender render of the Isaac warehouse with an animated LiDAR visualisation. Not an Isaac Sim sensor run and no point cloud. 54 source textures lived on an Omniverse Nucleus server and were not localised, so those materials fall back to constants. Clip frames were rendered at 12 samples for speed.</p>
 </div></section>
 
 <footer><div class="wrap">NVIDIA warehouse assets and textures are not included in this repo and keep their own licence.</div></footer>
@@ -113,6 +142,13 @@ footer{padding:40px 0;color:var(--mut);font-size:13px}
 <script>
 const D=__DATA__, T=__TEMPL__, G=__GAL__;
 const $=s=>document.querySelector(s);
+const M=__MET__, L=__LID__;
+$("#mstats").innerHTML=[["path length",M.path_length_m+" m"],["duration",M.duration_s+" s"],["mean speed",M.mean_speed_mps+" m/s"],["max speed",M.max_speed_mps+" m/s"],["route extent",M.extent_m[1]+" x "+M.extent_m[0]+" m"],["net displacement",M.net_displacement_m+" m"],["total rotation",M.yaw_total_rotation_deg+"\u00b0"],["stops",M.stops.length]].map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
+$("#lt").innerHTML=[["Max range",L.max_range_m+" m (fade from "+L.range_fade_start_m+" m)"],["Vertical FOV","+"+L.fov_up_deg+"\u00b0 / -"+L.fov_down_deg+"\u00b0"],["Returns",L.azimuth_divisions+" azimuth x "+L.elevation_divisions+" elevation"],["Beam width",L.beam_width_deg+"\u00b0"],["Trail",L.trail_angle_deg+"\u00b0 glow, x"+L.trail_boost+" (beam x"+L.beam_boost+")"],["Dot duty / fade",L.dot_duty+" / "+L.dot_fade_m[0]+"-"+L.dot_fade_m[1]+" m"],["Exposure",L.exposure],["Scan camera",L.camera.type+" "+L.camera.fisheye+", "+L.camera.lens.toFixed(1)+" mm, "+L.render.res.join("x")+" source"],["Sensor mount","parented to robot, "+M.sensor_xy_offset_m[0]+" m off centre, "+M.sensor_height_above_robot_m+" m up"]].map(([k,v])=>`<tr><td>${k}</td><td class="mono">${v}</td></tr>`).join("");
+(()=>{const sp=M.speed_series,cu=M.cum_series,n=sp.length,W=900,H=220,pl=44,pb=26,mxs=Math.max(...sp)*1.15,mxc=Math.max(...cu);
+const X=i=>pl+i/(n-1)*(W-pl-12),Ys=v=>H-pb-v/mxs*(H-pb-12),Yc=v=>H-pb-v/mxc*(H-pb-12);
+const ln=(a,Y)=>a.map((v,i)=>(i?"L":"M")+X(i).toFixed(1)+" "+Y(v).toFixed(1)).join("");
+$("#spd").innerHTML=`<path d="${ln(cu,Yc)}" fill="none" stroke="var(--acc2)" stroke-width="2"/><path d="${ln(sp,Ys)}" fill="none" stroke="var(--acc)" stroke-width="2"/><text x="${pl+6}" y="16" font-size="12" fill="var(--acc)" font-family="monospace">speed (max ${M.max_speed_mps} m/s)</text><text x="${pl+190}" y="16" font-size="12" fill="var(--acc2)" font-family="monospace">distance (${M.path_length_m} m)</text><text x="${pl}" y="${H-6}" font-size="11" fill="var(--mut)" font-family="monospace">0 s</text><text x="${W-60}" y="${H-6}" font-size="11" fill="var(--mut)" font-family="monospace">${M.duration_s} s</text>`;})();
 const st=[["objects",D.objects],["meshes",D.meshes],["triangles",(D.tris/1e6).toFixed(2)+"M"],["materials",D.materials],["textures",D.images],["lights",D.lights],["AprilTags",D.apriltags.length],["frames",D.f0+"–"+D.f1+" @"+D.fps]];
 $("#stats").innerHTML=st.map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
 const mx=Math.max(...T.map(t=>t[1]));
@@ -134,11 +170,18 @@ $("#path").innerHTML=`<path d="${line}" fill="none" stroke="var(--acc2)" stroke-
 def build() -> None:
     data = json.loads((ROOT / "data" / "scene_stats.json").read_text())
     gal = []
-    for p in sorted((DOCS / "media" / "stills").glob("*.jpg")):
-        gal.append([f"media/stills/{p.name}", f"{p.stem.replace('_', ' ')}"])
+    for name, cap in CURATED:
+        gal.append([f"media/stills/{name}.jpg", cap])
+    metrics = json.loads((ROOT / "data" / "metrics.json").read_text())
+    lidar = json.loads((ROOT / "data" / "lidar_params.json").read_text())
     html = (HTML.replace("__DATA__", json.dumps(data))
                 .replace("__TEMPL__", json.dumps(TEMPLATES))
-                .replace("__GAL__", json.dumps(gal)))
+                .replace("__GAL__", json.dumps(gal))
+                .replace("__MET__", json.dumps(metrics))
+                .replace("__LID__", json.dumps(lidar)))
+    (DOCS / "data").mkdir(exist_ok=True)
+    for n in ("robot_path.csv", "metrics.json", "lidar_params.json", "scene_stats.json", "report.txt"):
+        (DOCS / "data" / n).write_bytes((ROOT / "data" / n).read_bytes())
     (DOCS / "index.html").write_text(html, encoding="utf-8")
     log.info("wrote docs/index.html (%d gallery items)", len(gal))
 
