@@ -1,0 +1,16 @@
+name: check
+on: [push, pull_request]
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Rebuild page
+        run: python tools/build_page.py
+      - name: Page is up to date
+        run: git diff --exit-code docs/index.html
+      - name: No broken local links
+        run: python tools/check_site.py

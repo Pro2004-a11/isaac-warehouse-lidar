@@ -7,7 +7,6 @@
  "duration_s": 28.33,
  "path_length_m": 9.844,
  "mean_speed_mps": 0.347,
- "mean_moving_speed_mps": 0.347,
  "max_speed_mps": 0.689,
  "x_range_m": [
   -2.77,
@@ -21,26 +20,16 @@
   0.43,
   5.51
  ],
- "start": [
-  -2.7677,
-  0.5663
- ],
- "end": [
-  -2.3419,
-  -0.6331
- ],
  "net_displacement_m": 1.273,
+ "turnaround_frame": 449,
+ "turnaround_y_m": -4.946,
  "yaw_total_rotation_deg": 12.9,
- "yaw_range_deg": [
-  -90.0,
-  -77.1
- ],
- "stops": [],
  "sensor_height_above_robot_m": 0.052,
  "sensor_xy_offset_m": [
   0.124,
   0.124
  ],
+ "stops": [],
  "speed_series": [
   0.118,
   0.123,

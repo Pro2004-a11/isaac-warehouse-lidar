@@ -18,21 +18,15 @@
  "camera": {
   "lens": 21.26070213317871,
   "type": "PANO",
-  "sensor_w": 36.0,
-  "fisheye": "FISHEYE_EQUISOLID",
-  "clip": [
-   0.10000000149011612,
-   1000.0
-  ],
-  "parent": null
+  "fisheye": "FISHEYE_EQUISOLID"
  },
  "render": {
-  "samples": 50,
   "res": [
    1920,
    1920
   ],
-  "fps": 24
+  "fps": 24,
+  "samples": 50
  },
  "raw": {
   "Max Range": 14.0,

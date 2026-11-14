@@ -75,4 +75,19 @@ A Blender render of the Isaac warehouse with a LiDAR *visualisation*. Not an Isa
 
 `.blend` and `.usdc` files (55 MB and 42 MB) and NVIDIA's warehouse assets and textures, which keep NVIDIA's licence.
 
-Rebuild the page: `python tools/build_page.py`
+## Reproduce
+
+```
+blender -b warehouse2_Lidar.blend --python tools/extract_run_data.py -- data/_raw.json
+python tools/compute_metrics.py            # robot_path.csv, metrics.json, lidar_params.json
+blender -b warehouse2_Lidar.blend --python tools/render_media.py -- frames 8 12
+python tools/encode_media.py frames 12     # MP4s and GIFs into docs/media
+python tools/build_page.py                 # docs/index.html
+python tools/check_site.py                 # CI link check
+```
+
+The `.blend` is not in this repo (see above), so these need your own copy of the scene.
+
+## Licence
+
+Code: MIT, see [LICENSE](LICENSE). NVIDIA assets are not covered.
