@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Isaac Warehouse LiDAR</title>
+<style>
+:root{--bg:#07090a;--fg:#e6efe9;--mut:#8a9a92;--acc:#5dffa0;--acc2:#2ad4ff;--card:#0e1412;--line:#1b2a24}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 ui-sans-serif,system-ui,"Segoe UI",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.mono{font-family:ui-monospace,Consolas,monospace}
+header.hero{position:relative;min-height:88vh;display:grid;align-items:end;overflow:hidden;border-bottom:1px solid var(--line)}
+header.hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+header.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,var(--bg) 98%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:56px}
+.tag{color:var(--acc);letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(40px,8vw,92px);line-height:.95;margin:.2em 0;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--acc)}
+.lede{max-width:60ch;color:var(--mut);font-size:18px}
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,40px);margin:0 0 8px;letter-spacing:-.02em}
+.sub{color:var(--mut);max-width:70ch;margin:0 0 28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat b{display:block;font-size:30px;color:var(--acc);font-variant-numeric:tabular-nums}
+.stat span{color:var(--mut);font-size:13px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fig{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.fig video,.fig img{display:block;width:100%;height:auto}
+.fig figcaption{padding:10px 14px;color:var(--mut);font-size:13px}
+.gal{columns:3 300px;column-gap:12px}
+.gal .fig{break-inside:avoid;margin-bottom:12px;cursor:zoom-in}
+.gal img{transition:transform .3s}.gal .fig:hover img{transform:scale(1.03)}
+.gal .fig{overflow:hidden}
+.bars .row{display:grid;grid-template-columns:200px 1fr 40px;gap:10px;align-items:center;margin:6px 0;font-size:14px}
+.bars .bar{height:10px;border-radius:5px;background:linear-gradient(90deg,var(--acc),var(--acc2))}
+#path{width:100%;max-width:520px;height:auto;display:block;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.pipe{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;counter-reset:s}
+.pipe div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;counter-increment:s}
+.pipe div:before{content:"0" counter(s);color:var(--acc);font-family:ui-monospace,Consolas,monospace}
+.pipe b{display:block;margin:4px 0}
+.honest{border:1px dashed var(--acc);border-radius:10px;padding:16px;color:var(--mut)}
+footer{padding:40px 0;color:var(--mut);font-size:13px}
+#lb{position:fixed;inset:0;background:#000d;display:none;place-items:center;z-index:9;cursor:zoom-out}
+#lb img{max-width:96vw;max-height:94vh;border-radius:8px}
+@media(max-width:700px){.duo{grid-template-columns:1fr}.bars .row{grid-template-columns:120px 1fr 32px}}
+@media(prefers-reduced-motion:reduce){header.hero video{display:none}}
+</style></head><body>
+<header class="hero">
+<video autoplay muted loop playsinline poster="media/stills/Room_Camera_beauty_f300.jpg"><source src="media/lidar_room.mp4" type="video/mp4"></video>
+<div class="wrap"><div class="tag mono">Isaac Sim 5.0 → Blender 5.0 · Cycles</div>
+<h1>A robot, a warehouse,<br>and a <em>LiDAR wave</em>.</h1>
+<p class="lede">Digital Twin Warehouse exported from Isaac Sim USD to Blender with materials intact, then scanned by an animated LiDAR sensor riding a robot vacuum. Everything below is rendered from the source scene.</p></div>
+</header>
+
+<section><div class="wrap">
+<h2>The scene in numbers</h2><p class="sub">Read straight from <span class="mono">warehouse2_Lidar.blend</span> and the exporter report.</p>
+<div class="stats" id="stats"></div></div></section>
+
+<section><div class="wrap">
+<h2>Same frame, two sensors</h2><p class="sub">Left: ordinary beauty render. Right: the same instant through the LiDAR view layer, where a material override paints the scan wave across every surface.</p>
+<div class="duo">
+<figure class="fig"><video autoplay muted loop playsinline src="media/aisle.mp4"></video><figcaption>Aisle camera · beauty · frames 120–800</figcaption></figure>
+<figure class="fig"><video autoplay muted loop playsinline src="media/lidar_room.mp4"></video><figcaption>Room camera · LiDAR layer (<span class="mono">LiDAR_Pass</span> override)</figcaption></figure>
+<figure class="fig"><video autoplay muted loop playsinline src="media/topdown.mp4"></video><figcaption>Top-down follow · robot path</figcaption></figure>
+<figure class="fig"><video autoplay muted loop playsinline src="media/sensor_lidar.mp4"></video><figcaption>Sensor-mounted camera · LiDAR layer · 1920² source</figcaption></figure>
+</div></div></section>
+
+<section><div class="wrap">
+<h2>Robot path</h2><p class="sub">Robot and sensor positions sampled every 4 frames from the animation (metres, scene XY). The sensor is parented to the robot, about 12 cm off its centre.</p>
+<svg id="path" viewBox="0 0 520 640" role="img" aria-label="Robot path"></svg></div></section>
+
+<section><div class="wrap">
+<h2>Gallery</h2><p class="sub">Click any frame to enlarge.</p>
+<div class="gal" id="gal"></div></div></section>
+
+<section><div class="wrap">
+<h2>Materials converted</h2><p class="sub">101 Omniverse MDL materials rebuilt as Blender node graphs; 63 carry textures, 38 are constants only.</p>
+<div class="bars" id="bars"></div></div></section>
+
+<section><div class="wrap">
+<h2>Pipeline</h2><p class="sub">Code in this repo: <span class="mono">tools/</span> (CLI) and <span class="mono">addon/isaac_usd_importer</span> (Blender extension).</p>
+<div class="pipe">
+<div><b>Flatten &amp; collect</b>usd_flatten_collect.py resolves the USD stage and gathers textures.</div>
+<div><b>Parse MDL</b>mdl_parse.py reads Omniverse MDL parameters into a material spec.</div>
+<div><b>Build node graphs</b>material_spec + base_materials map each template to Principled BSDF graphs.</div>
+<div><b>Import &amp; verify</b>blender_import.py, verify_export.py and render_check.py.</div>
+<div><b>Add LiDAR</b>A sensor empty parented to the robot, a render layer with the <span class="mono">LiDAR_Pass</span> material override.</div>
+</div>
+<p class="honest" style="margin-top:24px"><b>Honest labels.</b> This is a Blender render of the Isaac warehouse with an animated LiDAR visualisation. It is not an Isaac Sim sensor run and produces no point cloud. 54 source textures lived on an Omniverse Nucleus server and were not localised; those materials fall back to constants.</p>
+</div></section>
+
+<footer><div class="wrap">NVIDIA warehouse assets and textures are not included in this repo and keep their own licence.</div></footer>
+<div id="lb"><img alt=""></div>
+<script>
+const D={"fps": 24, "f0": 120, "f1": 800, "engine": "CYCLES", "objects": 1919, "meshes": 925, "tris": 1403529, "materials": 132, "images": 106, "lights": 6, "apriltags": ["apriltag_14", "apriltag_15", "apriltag_16", "apriltag_18", "apriltag_19"], "path": [[120, -2.768, 0.566, -2.823, 0.677], [124, -2.763, 0.547, -2.813, 0.66], [128, -2.759, 0.526, -2.804, 0.642], [132, -2.754, 0.505, -2.794, 0.622], [136, -2.75, 0.482, -2.784, 0.601], [140, -2.745, 0.458, -2.774, 0.578], [144, -2.741, 0.433, -2.77, 0.553], [148, -2.736, 0.406, -2.765, 0.527], [152, -2.732, 0.379, -2.761, 0.499], [156, -2.727, 0.35, -2.756, 0.47], [160, -2.723, 0.32, -2.752, 0.44], [164, -2.718, 0.289, -2.747, 0.409], [168, -2.714, 0.257, -2.743, 0.377], [172, -2.709, 0.223, -2.738, 0.344], [176, -2.705, 0.188, -2.734, 0.309], [180, -2.7, 0.153, -2.729, 0.273], [184, -2.696, 0.116, -2.725, 0.236], [188, -2.691, 0.078, -2.72, 0.198], [192, -2.687, 0.038, -2.716, 0.159], [196, -2.682, -0.002, -2.711, 0.118], [200, -2.678, -0.044, -2.707, 0.077], [204, -2.673, -0.087, -2.702, 0.034], [208, -2.669, -0.131, -2.698, -0.01], [212, -2.664, -0.176, -2.693, -0.055], [216, -2.66, -0.222, -2.689, -0.102], [220, -2.655, -0.27, -2.684, -0.149], [224, -2.651, -0.318, -2.68, -0.198], [228, -2.646, -0.368, -2.675, -0.248], [232, -2.642, -0.419, -2.671, -0.299], [236, -2.637, -0.471, -2.666, -0.351], [240, -2.633, -0.525, -2.662, -0.404], [244, -2.628, -0.579, -2.657, -0.459], [248, -2.624, -0.635, -2.653, -0.515], [252, -2.619, -0.692, -2.648, -0.572], [256, -2.615, -0.75, -2.644, -0.63], [260, -2.61, -0.809, -2.639, -0.689], [264, -2.606, -0.87, -2.635, -0.749], [268, -2.601, -0.931, -2.63, -0.811], [272, -2.597, -0.994, -2.626, -0.874], [276, -2.592, -1.058, -2.621, -0.938], [280, -2.588, -1.123, -2.617, -1.003], [284, -2.583, -1.19, -2.612, -1.069], [288, -2.579, -1.257, -2.608, -1.137], [292, -2.574, -1.326, -2.603, -1.205], [296, -2.57, -1.395, -2.599, -1.275], [300, -2.565, -1.466, -2.594, -1.346], [304, -2.561, -1.539, -2.59, -1.418], [308, -2.556, -1.612, -2.585, -1.491], [312, -2.552, -1.686, -2.581, -1.566], [316, -2.547, -1.762, -2.576, -1.642], [320, -2.543, -1.839, -2.572, -1.719], [324, -2.539, -1.917, -2.567, -1.797], [328, -2.534, -1.996, -2.563, -1.876], [332, -2.53, -2.077, -2.558, -1.956], [336, -2.525, -2.158, -2.554, -2.038], [340, -2.521, -2.241, -2.549, -2.12], [344, -2.516, -2.325, -2.545, -2.204], [348, -2.512, -2.41, -2.54, -2.289], [352, -2.507, -2.496, -2.536, -2.376], [356, -2.503, -2.583, -2.531, -2.463], [360, -2.498, -2.672, -2.527, -2.552], [364, -2.494, -2.762, -2.522, -2.641], [368, -2.489, -2.853, -2.518, -2.732], [372, -2.485, -2.945, -2.513, -2.824], [376, -2.48, -3.038, -2.509, -2.918], [380, -2.476, -3.132, -2.504, -3.012], [384, -2.471, -3.228, -2.5, -3.108], [388, -2.467, -3.325, -2.495, -3.204], [392, -2.462, -3.423, -2.491, -3.302], [396, -2.458, -3.522, -2.486, -3.402], [400, -2.453, -3.622, -2.482, -3.502], [404, -2.449, -3.724, -2.478, -3.603], [408, -2.444, -3.826, -2.473, -3.706], [412, -2.44, -3.93, -2.469, -3.81], [416, -2.435, -4.035, -2.464, -3.915], [420, -2.431, -4.141, -2.46, -4.021], [424, -2.426, -4.249, -2.455, -4.128], [428, -2.422, -4.357, -2.451, -4.237], [432, -2.417, -4.467, -2.446, -4.347], [436, -2.413, -4.578, -2.442, -4.457], [440, -2.408, -4.69, -2.437, -4.57], [444, -2.404, -4.803, -2.433, -4.683], [448, -2.399, -4.918, -2.428, -4.797], [452, -2.395, -4.909, -2.424, -4.789], [456, -2.39, -4.86, -2.419, -4.74], [460, -2.386, -4.811, -2.415, -4.691], [464, -2.381, -4.762, -2.41, -4.642], [468, -2.377, -4.713, -2.406, -4.592], [472, -2.372, -4.664, -2.401, -4.543], [476, -2.368, -4.615, -2.397, -4.494], [480, -2.363, -4.565, -2.392, -4.445], [484, -2.359, -4.516, -2.388, -4.396], [488, -2.354, -4.467, -2.383, -4.347], [492, -2.35, -4.418, -2.379, -4.298], [496, -2.345, -4.369, -2.374, -4.248], [500, -2.342, -4.32, -2.371, -4.199], [504, -2.342, -4.27, -2.371, -4.15], [508, -2.342, -4.221, -2.371, -4.101], [512, -2.342, -4.172, -2.371, -4.052], [516, -2.342, -4.123, -2.371, -4.003], [520, -2.342, -4.074, -2.371, -3.953], [524, -2.342, -4.025, -2.371, -3.904], [528, -2.342, -3.976, -2.371, -3.855], [532, -2.342, -3.926, -2.371, -3.806], [536, -2.342, -3.877, -2.371, -3.757], [540, -2.342, -3.828, -2.371, -3.708], [544, -2.342, -3.779, -2.371, -3.659], [548, -2.342, -3.73, -2.371, -3.609], [552, -2.342, -3.681, -2.371, -3.56], [556, -2.342, -3.631, -2.371, -3.511], [560, -2.342, -3.582, -2.371, -3.462], [564, -2.342, -3.533, -2.371, -3.413], [568, -2.342, -3.484, -2.371, -3.364], [572, -2.342, -3.435, -2.371, -3.314], [576, -2.342, -3.386, -2.371, -3.265], [580, -2.342, -3.337, -2.371, -3.216], [584, -2.342, -3.287, -2.371, -3.167], [588, -2.342, -3.238, -2.371, -3.118], [592, -2.342, -3.189, -2.371, -3.069], [596, -2.342, -3.14, -2.371, -3.02], [600, -2.342, -3.091, -2.371, -2.97], [604, -2.342, -3.042, -2.371, -2.921], [608, -2.342, -2.992, -2.371, -2.872], [612, -2.342, -2.943, -2.371, -2.823], [616, -2.342, -2.894, -2.371, -2.774], [620, -2.342, -2.845, -2.371, -2.725], [624, -2.342, -2.796, -2.371, -2.675], [628, -2.342, -2.747, -2.371, -2.626], [632, -2.342, -2.698, -2.371, -2.577], [636, -2.342, -2.648, -2.371, -2.528], [640, -2.342, -2.599, -2.371, -2.479], [644, -2.342, -2.55, -2.371, -2.43], [648, -2.342, -2.501, -2.371, -2.381], [652, -2.342, -2.452, -2.371, -2.331], [656, -2.342, -2.403, -2.371, -2.282], [660, -2.342, -2.354, -2.371, -2.233], [664, -2.342, -2.304, -2.371, -2.184], [668, -2.342, -2.255, -2.371, -2.135], [672, -2.342, -2.206, -2.371, -2.086], [676, -2.342, -2.157, -2.371, -2.036], [680, -2.342, -2.108, -2.371, -1.987], [684, -2.342, -2.059, -2.371, -1.938], [688, -2.342, -2.009, -2.371, -1.889], [692, -2.342, -1.96, -2.371, -1.84], [696, -2.342, -1.911, -2.371, -1.791], [700, -2.342, -1.862, -2.371, -1.742], [704, -2.342, -1.813, -2.371, -1.692], [708, -2.342, -1.764, -2.371, -1.643], [712, -2.342, -1.715, -2.371, -1.594], [716, -2.342, -1.665, -2.371, -1.545], [720, -2.342, -1.616, -2.371, -1.496], [724, -2.342, -1.567, -2.371, -1.447], [728, -2.342, -1.518, -2.371, -1.397], [732, -2.342, -1.469, -2.371, -1.348], [736, -2.342, -1.42, -2.371, -1.299], [740, -2.342, -1.37, -2.371, -1.25], [744, -2.342, -1.321, -2.371, -1.201], [748, -2.342, -1.272, -2.371, -1.152], [752, -2.342, -1.223, -2.371, -1.103], [756, -2.342, -1.174, -2.371, -1.053], [760, -2.342, -1.125, -2.371, -1.004], [764, -2.342, -1.076, -2.371, -0.955], [768, -2.342, -1.026, -2.371, -0.906], [772, -2.342, -0.977, -2.371, -0.857], [776, -2.342, -0.928, -2.371, -0.808], [780, -2.342, -0.879, -2.371, -0.758], [784, -2.342, -0.83, -2.371, -0.709], [788, -2.342, -0.781, -2.371, -0.66], [792, -2.342, -0.731, -2.371, -0.611], [796, -2.342, -0.682, -2.371, -0.562], [800, -2.342, -0.633, -2.371, -0.513]], "lidar_params": {}, "scan_res": [1920, 1920]}, T=[["omni_pbr", 73], ["constant", 12], ["ue4_basic", 5], ["ue4_mask_lerp", 5], ["ue4_desat_tint", 3], ["ue4_color_mask4", 2], ["ue4_emissive_from_orm_alpha", 1]], G=[["media/stills/Aisle_Cam_beauty_f150.jpg", "Aisle Cam beauty f150"], ["media/stills/Aisle_Cam_beauty_f300.jpg", "Aisle Cam beauty f300"], ["media/stills/Aisle_Cam_beauty_f450.jpg", "Aisle Cam beauty f450"], ["media/stills/Aisle_Cam_beauty_f600.jpg", "Aisle Cam beauty f600"], ["media/stills/Aisle_Cam_beauty_f750.jpg", "Aisle Cam beauty f750"], ["media/stills/Room_Camera_beauty_f150.jpg", "Room Camera beauty f150"], ["media/stills/Room_Camera_beauty_f300.jpg", "Room Camera beauty f300"], ["media/stills/Room_Camera_beauty_f450.jpg", "Room Camera beauty f450"], ["media/stills/Room_Camera_beauty_f600.jpg", "Room Camera beauty f600"], ["media/stills/Room_Camera_beauty_f750.jpg", "Room Camera beauty f750"], ["media/stills/Room_Camera_lidar_f150.jpg", "Room Camera lidar f150"], ["media/stills/Room_Camera_lidar_f300.jpg", "Room Camera lidar f300"], ["media/stills/Room_Camera_lidar_f450.jpg", "Room Camera lidar f450"], ["media/stills/Room_Camera_lidar_f600.jpg", "Room Camera lidar f600"], ["media/stills/Room_Camera_lidar_f750.jpg", "Room Camera lidar f750"], ["media/stills/Scan_Camera_beauty_f150.jpg", "Scan Camera beauty f150"], ["media/stills/Scan_Camera_beauty_f300.jpg", "Scan Camera beauty f300"], ["media/stills/Scan_Camera_beauty_f450.jpg", "Scan Camera beauty f450"], ["media/stills/Scan_Camera_beauty_f600.jpg", "Scan Camera beauty f600"], ["media/stills/Scan_Camera_beauty_f750.jpg", "Scan Camera beauty f750"], ["media/stills/Scan_Camera_lidar_f150.jpg", "Scan Camera lidar f150"], ["media/stills/Scan_Camera_lidar_f300.jpg", "Scan Camera lidar f300"], ["media/stills/Scan_Camera_lidar_f450.jpg", "Scan Camera lidar f450"], ["media/stills/Scan_Camera_lidar_f600.jpg", "Scan Camera lidar f600"], ["media/stills/Scan_Camera_lidar_f750.jpg", "Scan Camera lidar f750"]];
+const $=s=>document.querySelector(s);
+const st=[["objects",D.objects],["meshes",D.meshes],["triangles",(D.tris/1e6).toFixed(2)+"M"],["materials",D.materials],["textures",D.images],["lights",D.lights],["AprilTags",D.apriltags.length],["frames",D.f0+"–"+D.f1+" @"+D.fps]];
+$("#stats").innerHTML=st.map(([k,v])=>`<div class="stat"><b>${v}</b><span>${k}</span></div>`).join("");
+const mx=Math.max(...T.map(t=>t[1]));
+$("#bars").innerHTML=T.map(([n,c])=>`<div class="row"><span class="mono">${n}</span><div class="bar" style="width:${c/mx*100}%"></div><span>${c}</span></div>`).join("");
+$("#gal").innerHTML=G.map(([f,c])=>`<figure class="fig"><img loading="lazy" src="${f}" alt="${c}"><figcaption>${c}</figcaption></figure>`).join("");
+document.querySelectorAll(".gal img").forEach(i=>i.onclick=()=>{$("#lb img").src=i.src;$("#lb").style.display="grid"});
+$("#lb").onclick=()=>$("#lb").style.display="none";
+(()=>{const P=D.path,xs=P.flatMap(p=>[p[1],p[3]]),ys=P.flatMap(p=>[p[2],p[4]]);
+const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),pad=40;
+const s=Math.min((520-2*pad)/Math.max(x1-x0,.01),(640-2*pad)/Math.max(y1-y0,.01));
+const ox=(520-(x1-x0)*s)/2,X=x=>ox+(x-x0)*s,Y=y=>640-pad-(y-y0)*s;
+const line=P.map((p,i)=>(i?"L":"M")+X(p[1]).toFixed(1)+" "+Y(p[2]).toFixed(1)).join("");
+const dots=P.filter((_,i)=>i%10==0).map(p=>`<circle cx="${X(p[1]).toFixed(1)}" cy="${Y(p[2]).toFixed(1)}" r="3" fill="var(--acc)"/><text x="${X(p[1])+8}" y="${Y(p[2])+4}" font-size="11" fill="var(--mut)" font-family="monospace">f${p[0]}</text>`).join("");
+$("#path").innerHTML=`<path d="${line}" fill="none" stroke="var(--acc2)" stroke-width="2" opacity=".8"/>${dots}`;})();
+</script></body></html>

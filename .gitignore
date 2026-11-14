@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.blend
+*.blend1
+*.usd
+*.usda
+*.usdc
+*.zip
+frames_*/
+/media/
+out/
+assets/

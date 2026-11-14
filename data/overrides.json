@@ -1,0 +1,20 @@
+{
+  "_comment": [
+    "Patches for material data the source USD cannot supply.",
+    "Keyed by material name, or by full prim path when a name is ambiguous.",
+    "Texture paths may be absolute, or relative to THIS file.",
+    "Slots: basecolor normal orm roughness metallic occlusion emissive opacity mask detail_normal"
+  ],
+
+  "Chain_Link_Fence": {
+    "textures": {
+      "opacity": "custom_textures/chainlink_alpha.png"
+    },
+    "constants": {
+      "base_color": [0.42, 0.43, 0.44],
+      "roughness": 0.45,
+      "metallic": 1.0,
+      "albedo_add": 0.0
+    }
+  }
+}

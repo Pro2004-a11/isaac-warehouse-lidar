@@ -1,0 +1,3911 @@
+{
+  "source": "D:\\Isaac-sim\\Assets\\Isaac\\5.0\\Isaac\\Environments\\Digital_Twin_Warehouse\\Collected_World0\\World0.usd",
+  "stage": "warehouse.usdc",
+  "up_axis": "Z",
+  "meters_per_unit": 1.0,
+  "uv_primvar": "st",
+  "skipped_already_preview": [
+    "/World/small_warehouse_digital_twin/Assets/bins/bin_stack/shallow_bin/Looks01/Color__c825c8ff",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Plastic_Black",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Gold_Matte",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Gold_Shiny",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Gold_Mesh",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Copper",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Gold",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Gold_B",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/DGX_Servers_material/Gold_Shiny_B",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/DGX_Servers_material/Plastic_Black",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/DGX_Servers_material/Gold_Matte",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/DGX_Servers_material/Copper",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/DGX_Servers_material/Gold",
+    "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/DGX_Servers_material/Gold_B",
+    "/World/small_warehouse_digital_twin/Assets/dollies/dolly/wheelMaterial"
+  ],
+  "unresolved_assets": [
+    "materials/Aluminum_Anodized_Black.mdl",
+    "materials/Aluminum_Polished.mdl",
+    "materials/Chain_Link_Fence.mdl",
+    "materials/Clear_Glass.mdl",
+    "materials/Concrete_Polished.mdl",
+    "materials/Copper_D.mdl",
+    "materials/DGX_Gold_Matte_A.mdl",
+    "materials/DGX_Gold_Mesh_A.mdl",
+    "materials/DGX_Gold_Shiny_A.mdl",
+    "materials/Gold_A.mdl",
+    "materials/Gold_D.mdl",
+    "materials/M_FlatBox_Cardboard_01.mdl",
+    "materials/M_MultiDepthBox_Cardboard_01.mdl",
+    "materials/M_MultiDepthBox_Decal_01.mdl",
+    "materials/Metal_Glossy_A.mdl",
+    "materials/Oak_Planks.mdl",
+    "materials/OmniPBR.mdl",
+    "materials/Paint_Gloss.mdl",
+    "materials/Paint_Satin.mdl",
+    "materials/Plastic.mdl",
+    "materials/Plastic_Acrylic.mdl",
+    "materials/Plastic_Black_C.mdl",
+    "materials/Plastic_Rough_Black_A.mdl",
+    "materials/Plastic_White_A.mdl",
+    "materials/Plywood.mdl",
+    "materials/Wood_Recycled_A.mdl",
+    "textures/Concrete_Polished_BaseColor.png",
+    "textures/Concrete_Polished_Normal.png",
+    "textures/Concrete_Polished_ORM.png",
+    "textures/FlatWhite.png",
+    "textures/Gold_BaseColor.png",
+    "textures/Gold_ORM.png",
+    "textures/Paint_Satin_Finish_BaseColor.png",
+    "textures/Paint_Satin_Finish_N.png",
+    "textures/Paint_Satin_Finish_ORM.png",
+    "textures/T_FlatBox_A01_Tile_Albedo.png",
+    "textures/T_FlatBox_A01_Tile_Normal.png",
+    "textures/T_FlatBox_A01_Tile_ORM.png",
+    "textures/T_Metal_triplanar_Roughness.png",
+    "textures/T_MultiDepthBox_A01_Tile_Albedo.png",
+    "textures/T_MultiDepthBox_A01_Tile_Normal.png",
+    "textures/T_MultiDepthBox_A01_Tile_ORM.png",
+    "textures/T_MultiDepthBox_A01_Trim_Albedo.png",
+    "textures/T_MultiDepthBox_A01_Trim_Normal.png",
+    "textures/T_MultiDepthBox_A01_Trim_ORM.png",
+    "textures/T_MultiDepthBox_A01_Trim_Opacity.png",
+    "textures/T_Plastic_Black_A_Albedo.png",
+    "textures/T_Plastic_Black_A_Normal.png",
+    "textures/T_Plastic_Black_A_ORM.png",
+    "textures/T_Plastic_ORM.png",
+    "textures/T_WoodenCrates_B1_Albedo.1001.png",
+    "textures/T_WoodenCrates_B1_Normal.1001.png",
+    "textures/T_WoodenCrates_B1_ORM.1001.png",
+    "textures/T_bump_noise.png"
+  ],
+  "materials": [
+    {
+      "name": "Concrete_Polished",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Concrete_Polished",
+      "mdl_module": "Concrete_Polished",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.2653452742099762,
+          0.2610634104013443,
+          0.2529662251472473
+        ],
+        "metallic": 0.6000000238418579,
+        "roughness": 0.35,
+        "albedo_add": 0.12999999523162842,
+        "albedo_desaturation": 0.0,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "bump_factor": 1.0,
+        "specular": 0.5,
+        "texture_tint": [
+          0.3222506642341614,
+          0.31811508536338806,
+          0.30741557478904724
+        ]
+      },
+      "uv": {
+        "scale": [
+          0.05000000074505806,
+          0.05000000074505806
+        ],
+        "translate": [
+          0.0,
+          0.0
+        ],
+        "rotate": 0.0
+      },
+      "flags": {
+        "enable_emission": false,
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true,
+        "project_uvw": true,
+        "world_or_object": false,
+        "flip_tangent_v": true
+      },
+      "warnings": [
+        "diffuse_color_constant [1.0, 1.0, 1.0] ignored: it sits behind a texture that is not on disk, so it is dead data in the source",
+        "project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs",
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/Concrete_Polished_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/Concrete_Polished_BaseColor.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/Concrete_Polished_Normal.png"
+      ]
+    },
+    {
+      "name": "Aluminum_Anodized_Black",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Aluminum_Anodized_Black",
+      "mdl_module": "Aluminum_Anodized_Black",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          4.526854146018607e-07,
+          4.5267635582932976e-07,
+          4.5267635582932976e-07
+        ],
+        "metallic": 1.0,
+        "roughness": 0.38,
+        "opacity": 1.0,
+        "texture_tint": [
+          9.999999974752427e-07,
+          9.999899930335232e-07,
+          9.999899930335232e-07
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Clear_Glass",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Clear_Glass",
+      "mdl_module": "Clear_Glass",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.02,
+        "opacity": 0.08,
+        "ior": 1.52
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Chain_Link_Fence",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Chain_Link_Fence",
+      "mdl_module": "Chain_Link_Fence",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs",
+        "override"
+      ],
+      "textures": {
+        "opacity": {
+          "file": "textures/chainlink_alpha.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.42,
+          0.43,
+          0.44
+        ],
+        "metallic": 1.0,
+        "roughness": 0.45,
+        "albedo_add": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          2.0,
+          2.0
+        ],
+        "rotate": 0.0
+      },
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true,
+        "project_uvw": true,
+        "world_or_object": true
+      },
+      "warnings": [
+        "project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs",
+        "no texture resolved; constants only",
+        "override: opacity <- chainlink_alpha.png"
+      ]
+    },
+    {
+      "name": "Metal_Grid",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Metal_Grid",
+      "mdl_module": "Chain_Link_Fence",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.8799999928474427,
+          0.8899999928474426,
+          0.8999999928474426
+        ],
+        "metallic": 1.0,
+        "roughness": 0.25,
+        "albedo_add": 0.3199999928474426,
+        "specular": 0.800000011920929,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "rotate": 0.0
+      },
+      "flags": {
+        "project_uvw": true,
+        "world_or_object": true
+      },
+      "warnings": [
+        "project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs",
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Plastic_Acrylic",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Plastic_Acrylic",
+      "mdl_module": "Plastic_Acrylic",
+      "template": "constant",
+      "sources": [
+        "base_lut"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.9,
+          0.9,
+          0.9
+        ],
+        "metallic": 0.0,
+        "roughness": 0.05,
+        "opacity": 0.15,
+        "ior": 1.49
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Satin_Paint_White",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Satin_Paint_White",
+      "mdl_module": "Paint_Satin",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.4887468338012695,
+          0.4887419521808624,
+          0.4887419521808624
+        ],
+        "metallic": 0.0,
+        "roughness": 0.35,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.6982097625732422,
+          0.6982027888298035,
+          0.6982027888298035
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Satin_Paint_Gray",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Satin_Paint_Gray",
+      "mdl_module": "Paint_Satin",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.11941229999065399,
+          0.12173914313316345,
+          0.11333260685205458
+        ],
+        "metallic": 0.0,
+        "roughness": 0.35,
+        "albedo_add": 0.0,
+        "albedo_desaturation": 0.0,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "bump_factor": 1.0,
+        "specular": 0.5,
+        "texture_tint": [
+          0.17058899998664856,
+          0.17391306161880493,
+          0.1619037240743637
+        ]
+      },
+      "uv": {
+        "scale": [
+          0.009999999776482582,
+          0.009999999776482582
+        ],
+        "translate": [
+          0.0,
+          0.0
+        ],
+        "rotate": 0.0
+      },
+      "flags": {
+        "enable_emission": false,
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true,
+        "project_uvw": true,
+        "world_or_object": false,
+        "flip_tangent_v": true
+      },
+      "warnings": [
+        "diffuse_color_constant [1.0, 0.0, 0.0] ignored: it sits behind a texture that is not on disk, so it is dead data in the source",
+        "project_uvw: MDL used triplanar/world projection; Blender build uses BOX projection instead of the mesh UVs",
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/Paint_Satin_Finish_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/Paint_Satin_Finish_BaseColor.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/Paint_Satin_Finish_N.png"
+      ]
+    },
+    {
+      "name": "Wooden_Pallet",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Wooden_Pallet",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_PalletWooden_A_Albedo.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_PalletWooden_A_Normal.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_PalletWooden_A_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "albedo_add": 0.0,
+        "albedo_desaturation": 0.0,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "bump_factor": 1.0,
+        "specular": 0.5,
+        "base_color": [
+          0.5,
+          0.49999499320983887,
+          0.49999499320983887
+        ],
+        "texture_tint": [
+          1.0,
+          0.9999899864196777,
+          0.9999899864196777
+        ]
+      },
+      "uv": {
+        "rotate": 0.0
+      },
+      "flags": {
+        "enable_emission": false,
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true,
+        "project_uvw": false,
+        "world_or_object": false,
+        "flip_tangent_v": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "Paint_Gloss_Black",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Paint_Gloss_Black",
+      "mdl_module": "Paint_Gloss",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          6.999999982326699e-07,
+          6.999929951234662e-07,
+          6.999929951234662e-07
+        ],
+        "metallic": 0.0,
+        "roughness": 0.08,
+        "opacity": 1.0,
+        "texture_tint": [
+          9.999999974752427e-07,
+          9.999899930335232e-07,
+          9.999899930335232e-07
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Cone_Red",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Cone_Red",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.3600562198923285,
+          0.0,
+          0.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5400843620300293,
+          0.0,
+          0.0
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Plastic_White",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Plastic_White",
+      "mdl_module": "Plastic",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.750895118713379,
+          0.7508875846862794,
+          0.7508875846862794
+        ],
+        "metallic": 0.0,
+        "roughness": 0.4,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.9386188983917236,
+          0.9386094808578491,
+          0.9386094808578491
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Purple_Bin",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Purple_Bin",
+      "mdl_module": "Concrete_Polished",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.5324552440643311,
+          0.45270348790287973,
+          0.5091305494308471
+        ],
+        "metallic": 0.0,
+        "roughness": 0.35,
+        "albedo_add": 0.4099999964237213,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.2915601134300232,
+          0.10364925116300583,
+          0.24782638251781464
+        ]
+      },
+      "uv": {
+        "scale": [
+          2.0,
+          2.0
+        ]
+      },
+      "flags": {
+        "project_uvw": false
+      },
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Aluminum_Polished",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Aluminum_Polished",
+      "mdl_module": "Aluminum_Polished",
+      "template": "constant",
+      "sources": [
+        "base_lut"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.912,
+          0.914,
+          0.92
+        ],
+        "metallic": 1.0,
+        "roughness": 0.08,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Plywood",
+      "prim_path": "/World/small_warehouse_digital_twin/Looks/Plywood",
+      "mdl_module": "Plywood",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.49493672609329226,
+          0.4422411477565765,
+          0.39508805274963377
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7,
+        "albedo_add": 0.30000001192092896,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.29535865783691406,
+          0.2735406458377838,
+          0.2716801166534424
+        ]
+      },
+      "uv": {
+        "scale": [
+          3.0,
+          1.0
+        ]
+      },
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Plastic_Rough_Black_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/pallets/black_plastic_pallet/Looks/Plastic_Rough_Black_A",
+      "mdl_module": "Plastic_Rough_Black_A",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.028,
+          0.028,
+          0.03
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7,
+        "bump_factor": 2.5,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Plastic_Rough_Black_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/pallets/gray_plastic_pallet/Looks/Plastic_Rough_Black_A",
+      "mdl_module": "Plastic_Rough_Black_A",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.5741662383079529,
+          0.6348049302235665,
+          0.5850200531583312
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7,
+        "albedo_add": 0.3100000023841858,
+        "bump_factor": 2.5,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.2641662359237671,
+          0.32480818033218384,
+          0.27502280473709106
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Wood_Recycled_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/pallets/small_pallet/Looks/Wood_Recycled_A",
+      "mdl_module": "Wood_Recycled_A",
+      "template": "constant",
+      "sources": [
+        "base_lut"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.38,
+          0.3,
+          0.24
+        ],
+        "metallic": 0.0,
+        "roughness": 0.75,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Metal_Glossy_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/pallets/small_pallet/Looks/Metal_Glossy_A",
+      "mdl_module": "Metal_Glossy_A",
+      "template": "constant",
+      "sources": [
+        "base_lut"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.56,
+          0.57,
+          0.58
+        ],
+        "metallic": 1.0,
+        "roughness": 0.15,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_a100_boxes/dgx_a100_box_07/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/dgx_station_a100.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/dgx_station_a100.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.09000000357627869,
+        "opacity_threshold": 0.07000000029802322,
+        "specular": 0.5,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal_wrap",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_a100_boxes/dgx_a100_box_07/Looks/decal_wrap",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/dgx_station_a100_wrap.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.0,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal_red",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_a100_boxes/dgx_a100_box_07/Looks/decal_red",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/do_not_double_stack.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.0,
+        "base_color": [
+          0.28999998047947884,
+          0.2899972768129828,
+          0.2899972768129828
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5399999618530273,
+          0.5399945545200353,
+          0.5399945545200353
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_CardBoxC",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/hesai_boxes/hesai_box_05/SM_CardBoxC_02/Looks/MI_CardBoxC",
+      "mdl_module": "MI_LampCeilingA",
+      "template": "ue4_desat_tint",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_CardBoxC_D.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_CardBoxC_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_CardBoxC_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "desaturation": 0.5,
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "uv_tile_u": 1.0,
+        "uv_tile_v": 1.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5,
+          0.4000000059604645,
+          0.25
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/hesai_boxes/hesai_box_05/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/hesai.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/hesai_opacity_map.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.09000000357627869,
+        "opacity_threshold": 0.07000000029802322,
+        "specular": 0.5,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/jetson_orin_boxes/jetson_orin/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/jetson.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/jetson.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal_wrap",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/jetson_orin_boxes/jetson_orin/Looks/decal_wrap",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/jetson_wrap.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": true
+      },
+      "warnings": [
+        "CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file."
+      ]
+    },
+    {
+      "name": "M_MultiDepthBox_Decal_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_boxes/dgx_box/box/Looks/M_MultiDepthBox_Decal_01",
+      "mdl_module": "M_MultiDepthBox_Decal_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.62,
+          0.47,
+          0.32
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "opacity_threshold": 0.04999999701976776,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.",
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Trim_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Trim_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Trim_Normal.png",
+        "usd texture unresolved: opacity_texture -> ./textures/T_MultiDepthBox_A01_Trim_Opacity.png"
+      ]
+    },
+    {
+      "name": "M_MultiDepthBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_boxes/dgx_box/box/Looks/M_MultiDepthBox_Cardboard_01",
+      "mdl_module": "M_MultiDepthBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.3120000046491623,
+          0.1710000067949295,
+          0.0551250021904707
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.0,
+        "albedo_desaturation": 0.8499999642372131,
+        "opacity_threshold": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.6000000089406967,
+          0.45000001788139343,
+          0.22500000894069672
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_boxes/dgx_box/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/dgx_station.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.09000000357627869,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal_wrap",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/dgx_boxes/dgx_box/Looks/decal_wrap",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/dgx_station_wrap.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.0,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal_logo",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/titan_rtx_box_01/Looks/decal_logo",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/nvidia_logo_black_font.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": -0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "base_color": [
+          0.4212148269671765,
+          0.4152107306513919,
+          0.4009031499511053
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.8824296530402833,
+          0.8704214604087142,
+          0.841806299008141
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "M_FlatBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/jetson_dev_kit/FlatBox_A04_20x26x12cm_PR_NVD_01/Looks/M_FlatBox_Cardboard_01",
+      "mdl_module": "M_FlatBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.89824444770813,
+          0.9407928264141083,
+          0.8299999833106995
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.8299999833106995,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.13123935461044312,
+          0.2915601134300232,
+          0.0
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/jetson_dev_kit/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/jetson_xavier_image.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/jetson_xavier_image.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.009999999776482582,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "M_FlatBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/jetson_xavier/FlatBox_A04_20x26x12cm_PR_NVD_01/Looks/M_FlatBox_Cardboard_01",
+      "mdl_module": "M_FlatBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.52,
+          0.37999619483947755,
+          0.24499754667282103
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          1.0,
+          0.9999899864196777,
+          0.9999899864196777
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/jetson_xavier/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/jetson_xavier_wrap.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": true
+      },
+      "warnings": [
+        "CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file."
+      ]
+    },
+    {
+      "name": "M_FlatBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/titan_rtx_box/FlatBox_A04_20x26x12cm_PR_NVD_01/Looks/M_FlatBox_Cardboard_01",
+      "mdl_module": "M_FlatBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.8299999833106995,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.8654731382829759,
+          0.8654644538862541,
+          0.8654644538862541
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/titan_rtx_box/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/titan_rtx.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": -0.009999999776482582,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "base_color": [
+          0.32684141415102275,
+          0.3222576418686707,
+          0.3113346505653709
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.6736828278550107,
+          0.6645152832903065,
+          0.642669300683707
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal_logo",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/titan_rtx_box/Looks/decal_logo",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/nvidia_logo_black_font.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": -0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "base_color": [
+          0.4212148269671765,
+          0.4152107306513919,
+          0.4009031499511053
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.8824296530402833,
+          0.8704214604087142,
+          0.841806299008141
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/rtx_box/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/rtx.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": -0.009999999776482582,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "base_color": [
+          0.32684141415102275,
+          0.3222576418686707,
+          0.3113346505653709
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.6736828278550107,
+          0.6645152832903065,
+          0.642669300683707
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal_logo",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/rtx_box/Looks/decal_logo",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/nvidia_logo_white_font.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.009999999776482582,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "base_color": [
+          0.2614449929312599,
+          0.25802330384404115,
+          0.2498695217972795
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.5028899863095546,
+          0.49604660813511714,
+          0.47973904404159384
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "M_FlatBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/gpu_box/FlatBox_A04_20x26x12cm_PR_NVD_01/Looks/M_FlatBox_Cardboard_01",
+      "mdl_module": "M_FlatBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.014629147052764893,
+          0.010690423659980297,
+          0.006892509991303086
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.028132975101470947,
+          0.028132693842053413,
+          0.028132693842053413
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "M_FlatBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/shield_controller_box/FlatBox_A05_26x26x11cm_PR_NVD_01/Looks/M_FlatBox_Cardboard_01",
+      "mdl_module": "M_FlatBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          1.0,
+          1.0,
+          0.9850000095367432
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.7400000095367432,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/shield_controller_box/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/shield.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": -0.009999999776482582,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.0,
+        "base_color": [
+          0.4596802720566622,
+          0.4532888150606418,
+          0.4380581655251632
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.9393605436662895,
+          0.9265776296742487,
+          0.8961163306032915
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "M_FlatBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/jetson_xavier_01/FlatBox_A04_20x26x12cm_PR_NVD_01/Looks/M_FlatBox_Cardboard_01",
+      "mdl_module": "M_FlatBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.52,
+          0.37999619483947755,
+          0.24499754667282103
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          1.0,
+          0.9999899864196777,
+          0.9999899864196777
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_FlatBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_FlatBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_FlatBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/small_boxes/jetson_xavier_01/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/jetson_xavier_wrap.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": false,
+        "enable_opacity_texture": true
+      },
+      "warnings": [
+        "CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file."
+      ]
+    },
+    {
+      "name": "MaterialInstanceDynamic_6801",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box_01/Looks/MaterialInstanceDynamic_6801",
+      "mdl_module": "MI_LampCeilingA",
+      "template": "ue4_desat_tint",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_CardBoxA_D.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_CardBoxA_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_CardBoxA_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "desaturation": 1.2000000476837158,
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "uv_tile_u": 1.0,
+        "uv_tile_v": 1.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          1.2000000476837158,
+          0.800000011920929,
+          0.30000001192092896
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box_01/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/drive_constellation.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/drive_constellation.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal_wrap",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box_01/Looks/decal_wrap",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/drive_constellation_wrap.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/drive_constellation_wrap.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "M_MultiDepthBox_Decal_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box_01/MultiDepthBox_A12_36x51x36xcm_PR_NVD_01/Looks/M_MultiDepthBox_Decal_01",
+      "mdl_module": "M_MultiDepthBox_Decal_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.6373755106010518,
+          0.5412332529385897,
+          0.4450949790120978
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.23999999463558197,
+        "opacity_threshold": 0.04999999701976776,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.6409282515572094,
+          0.6409218261766121,
+          0.6409218261766121
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.",
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Trim_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Trim_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Trim_Normal.png",
+        "usd texture unresolved: opacity_texture -> ./textures/T_MultiDepthBox_A01_Trim_Opacity.png"
+      ]
+    },
+    {
+      "name": "M_MultiDepthBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box_01/MultiDepthBox_A12_36x51x36xcm_PR_NVD_01/Looks/M_MultiDepthBox_Cardboard_01",
+      "mdl_module": "M_MultiDepthBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.4527848207950592,
+          0.346341872215271,
+          0.22584361538290976
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.15000000596046448,
+        "opacity_threshold": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5822784900665283,
+          0.516689121723175,
+          0.3095657527446747
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "MaterialInstanceDynamic_6801",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box/Looks/MaterialInstanceDynamic_6801",
+      "mdl_module": "MI_LampCeilingA",
+      "template": "ue4_desat_tint",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_CardBoxA_D.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_CardBoxA_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_CardBoxA_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "desaturation": 1.2000000476837158,
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "uv_tile_u": 1.0,
+        "uv_tile_v": 1.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          1.2000000476837158,
+          0.800000011920929,
+          0.30000001192092896
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "decal",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box/Looks/decal",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/drive_constellation.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/drive_constellation.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "decal_wrap",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box/Looks/decal_wrap",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/drive_constellation_wrap.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/drive_constellation_wrap.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.019999999552965164,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.5600000023841858,
+        "base_color": [
+          0.30349996665120216,
+          0.28999998047947884,
+          0.28999998047947884
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.566999934196474,
+          0.5399999618530273,
+          0.5399999618530273
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "M_MultiDepthBox_Decal_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box/MultiDepthBox_A12_36x51x36xcm_PR_NVD_01/Looks/M_MultiDepthBox_Decal_01",
+      "mdl_module": "M_MultiDepthBox_Decal_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.6373755106010518,
+          0.5412332529385897,
+          0.4450949790120978
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.23999999463558197,
+        "opacity_threshold": 0.04999999701976776,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.6409282515572094,
+          0.6409218261766121,
+          0.6409218261766121
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "CUTOUT LOST: enable_opacity_texture is on but no alpha map resolved (it is a default inside a Nucleus-hosted .mdl). This surface will render SOLID -- supply one via the overrides file.",
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Trim_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Trim_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Trim_Normal.png",
+        "usd texture unresolved: opacity_texture -> ./textures/T_MultiDepthBox_A01_Trim_Opacity.png"
+      ]
+    },
+    {
+      "name": "M_MultiDepthBox_Cardboard_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/boxes/drive_constellation_boxes/drive_constellation_box/MultiDepthBox_A12_36x51x36xcm_PR_NVD_01/Looks/M_MultiDepthBox_Cardboard_01",
+      "mdl_module": "M_MultiDepthBox_Cardboard_01",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.4527848207950592,
+          0.346341872215271,
+          0.22584361538290976
+        ],
+        "metallic": 0.0,
+        "roughness": 0.85,
+        "albedo_add": 0.15000000596046448,
+        "opacity_threshold": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5822784900665283,
+          0.516689121723175,
+          0.3095657527446747
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity_texture": false,
+        "enable_orm_texture": true
+      },
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_MultiDepthBox_A01_Tile_ORM.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_MultiDepthBox_A01_Tile_Albedo.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_MultiDepthBox_A01_Tile_Normal.png"
+      ]
+    },
+    {
+      "name": "PlywoodCrate_B",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/crate/Looks/PlywoodCrate_B",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "albedo_add": 0.08999999612569809,
+        "base_color": [
+          0.6499999985098839,
+          0.624999962747097,
+          0.5199999734759331
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          1.1200000047683716,
+          1.0699999332427979,
+          0.85999995470047
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: ORM_texture -> ./textures/T_WoodenCrates_B1_ORM.1001.png",
+        "usd texture unresolved: diffuse_texture -> ./textures/T_WoodenCrates_B1_Albedo.1001.png",
+        "usd texture unresolved: normalmap_texture -> ./textures/T_WoodenCrates_B1_Normal.1001.png"
+      ]
+    },
+    {
+      "name": "M_TrafficCone",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/closet/cone/Looks/M_TrafficCone",
+      "mdl_module": "M_TrafficCone",
+      "template": "ue4_basic",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_TrafficCone_D.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_TrafficCone_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_TrafficCone_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "emissive dropped: MDL drives it from a fresnel rim hack that does not survive translation"
+      ]
+    },
+    {
+      "name": "FOF_Mesh_LabelsSG",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/layer/small_bin_03/Visuals/Looks/FOF_Mesh_LabelsSG",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/FOF_Map_Labels_D.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "FOF_Mesh_StickerSG",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/layer/small_bin_03/Visuals/Looks/FOF_Mesh_StickerSG",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/FOF_Mesh_Labels_D.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "FOF_Mesh_Magenta_BoxSG",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/layer/small_bin_03/Visuals/Looks/FOF_Mesh_Magenta_BoxSG",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/FOF_Map_Magenta_Box_D.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "FOF_Mesh_LabelsSG",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/layer_02/small_bin_07/Visuals/Looks/FOF_Mesh_LabelsSG",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/FOF_Map_Labels_D.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "FOF_Mesh_StickerSG",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/layer_02/small_bin_07/Visuals/Looks/FOF_Mesh_StickerSG",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/FOF_Mesh_Labels_D.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "FOF_Mesh_Magenta_BoxSG",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/layer_02/small_bin_07/Visuals/Looks/FOF_Mesh_Magenta_BoxSG",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/FOF_Map_Magenta_Box_D.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Plastic_Rough_Black_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/bin_pallet/Looks/Plastic_Rough_Black_A",
+      "mdl_module": "Plastic_Rough_Black_A",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          1.0,
+          0.7815000824495826,
+          1.0
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7,
+        "albedo_add": 0.35999998450279236,
+        "bump_factor": 2.5,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.9156010150909424,
+          0.42150431871414185,
+          0.7854427099227905
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Plastic_White_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid/lid/Looks/Plastic_White_A",
+      "mdl_module": "Plastic_White_A",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.45237848281860354,
+          0.1735467267036438,
+          0.3450098043680191
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7999999523162842,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5140664577484131,
+          0.19721218943595886,
+          0.39656299352645874
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Plastic_White_A",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/bins/small_bin_grid_01/lid/Looks/Plastic_White_A",
+      "mdl_module": "Plastic_White_A",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.45237848281860354,
+          0.1735467267036438,
+          0.3450098043680191
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7999999523162842,
+        "albedo_add": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5140664577484131,
+          0.19721218943595886,
+          0.39656299352645874
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "tag",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltags/apriltag_18/tag",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/18.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "tag",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltags/apriltag_15/tag",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/15.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "tag",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltags/apriltag_16/tag",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/16.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "tag",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltags/apriltag_14/tag",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/14.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "tag",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltags/apriltag_12/tag",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/12.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "tag",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltags/apriltag_19/tag",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/19.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "White",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/outlets/single_outlet/Looks/White",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "roughness": 0.3499999940395355,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": [
+        "no texture resolved; constants only",
+        "usd texture unresolved: diffuse_texture -> ./textures/FlatWhite.png"
+      ]
+    },
+    {
+      "name": "colors",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/macbeth/colors",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/macbeth.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Oak_Planks",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/wood_platform/Looks/Oak_Planks",
+      "mdl_module": "Oak_Planks",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.6863427072763444,
+          0.524936419725418,
+          0.3811190414428711
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6,
+        "albedo_add": 0.3100000023841858,
+        "albedo_desaturation": 0.3400000035762787,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.8363171219825745,
+          0.6933432817459106,
+          0.3743107318878174
+        ]
+      },
+      "uv": {
+        "rotate": 0.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Oak_Planks_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/wood_platform/Looks/Oak_Planks_01",
+      "mdl_module": "Oak_Planks",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.8363426834344865,
+          0.6749363958835601,
+          0.5311190176010132
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6,
+        "albedo_add": 0.4599999785423279,
+        "albedo_desaturation": 0.3400000035762787,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.8363171219825745,
+          0.6933432817459106,
+          0.3743107318878174
+        ]
+      },
+      "uv": {
+        "rotate": 0.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Oak_Planks_02",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/wood_platform/Looks/Oak_Planks_02",
+      "mdl_module": "Oak_Planks",
+      "template": "omni_pbr",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.5963427037000657,
+          0.4349364161491394,
+          0.29111903786659243
+        ],
+        "metallic": 0.0,
+        "roughness": 0.6,
+        "albedo_add": 0.2199999988079071,
+        "albedo_desaturation": 0.3400000035762787,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.8363171219825745,
+          0.6933432817459106,
+          0.3743107318878174
+        ]
+      },
+      "uv": {
+        "rotate": 0.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": [
+        "no texture resolved; constants only"
+      ]
+    },
+    {
+      "name": "Plywood",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/wood_platform/Looks/Plywood",
+      "mdl_module": "Plywood",
+      "template": "constant",
+      "sources": [
+        "base_lut",
+        "usd_inputs"
+      ],
+      "textures": {},
+      "constants": {
+        "base_color": [
+          0.3397468435764313,
+          0.24810218930244446,
+          0.15888301730155943
+        ],
+        "metallic": 0.0,
+        "roughness": 0.7,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.5147679448127747,
+          0.4771195948123932,
+          0.45395147800445557
+        ]
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "dgx_station",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/stickers/dgx_station/dgx_station",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/dgx_station_simple.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/dgx_station_simple.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 1.0,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.4399999976158142,
+        "base_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.2318143419072598,
+          0.21264085107337394,
+          0.1643240842790945
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "nvidia",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/computers/DGX_station/stickers/nvidia/nvidia",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/nvidia_logo_black_font.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/nvidia_logo_white_font.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 1.0,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.1899999976158142,
+        "base_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.03286920101582247,
+          0.029244363350888314,
+          0.020109850514357985
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "dgx_station",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/stickers/dgx_station/dgx_station",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/dgx_station_simple.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/dgx_station_simple.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 1.0,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.4399999976158142,
+        "base_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.2318143419072598,
+          0.21264085107337394,
+          0.1643240842790945
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "nvidia",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/computers/DGX_station_01/stickers/nvidia/nvidia",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/nvidia_logo_black_font.png",
+          "colorspace": "sRGB"
+        },
+        "opacity": {
+          "file": "textures/nvidia_logo_white_font.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 1.0,
+        "albedo_desaturation": 0.08999999612569809,
+        "opacity": 1.0,
+        "opacity_threshold": 0.1899999976158142,
+        "base_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "texture_tint": [
+          0.03286920101582247,
+          0.029244363350888314,
+          0.020109850514357985
+        ]
+      },
+      "uv": {},
+      "flags": {
+        "enable_opacity": true,
+        "enable_opacity_texture": true
+      },
+      "warnings": []
+    },
+    {
+      "name": "tags",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/apriltag_board/tags",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/board.png",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "MI_ReceptionTable",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/desk/Looks/MI_ReceptionTable",
+      "mdl_module": "MI_Props",
+      "template": "ue4_basic",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_ReceptionTable_bc.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_ReceptionTable_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_ReceptionTable_ao_r_m.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_multiplier": 1.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_PC",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/mouse/Looks/MI_PC",
+      "mdl_module": "MI_Props",
+      "template": "ue4_basic",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_PC_bc.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_PC_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_PC_ao_r_m.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_multiplier": 1.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_Props",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/mouse_pad/Looks/MI_Props",
+      "mdl_module": "MI_Props",
+      "template": "ue4_basic",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_Props_bc.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_Props_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_Props_ao_r_m.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_multiplier": 1.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_ChairOfficeA_Red",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/chair/SM_ChairOffice_A/Looks/MI_ChairOfficeA_Red",
+      "mdl_module": "MI_DoorA",
+      "template": "ue4_color_mask4",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_ChairOfficeA_bc.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_ChairOfficeA_mask.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_ChairOfficeA_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_ChairOfficeA_ao_r_m.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "mask_color_1": [
+          0.6724429726600647,
+          0.009720999747514725,
+          0.0056050000712275505
+        ],
+        "mask_color_2": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mask_color_3": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mask_color_4": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_ChairOfficeA_Black",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/chair/Looks/MI_ChairOfficeA_Black",
+      "mdl_module": "MI_DoorA",
+      "template": "ue4_color_mask4",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_ChairOfficeA_bc.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_ChairOfficeA_mask.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_ChairOfficeA_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_ChairOfficeA_ao_r_m.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "mask_color_1": [
+          0.014999999664723873,
+          0.014999999664723873,
+          0.014999999664723873
+        ],
+        "mask_color_2": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mask_color_3": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mask_color_4": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_PC_ON_02",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/monitor/Looks/MI_PC_ON_02",
+      "mdl_module": "MI_PC_ON_02",
+      "template": "ue4_basic",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_PC_bc.png",
+          "colorspace": "sRGB"
+        },
+        "emissive": {
+          "file": "textures/T_PC_02_e.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_PC_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_PC_ao_r_m.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "emissive_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emissive_strength": 2.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_PC1",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/office/computer/Looks/MI_PC1",
+      "mdl_module": "MI_Clock",
+      "template": "ue4_emissive_from_orm_alpha",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_PC1_bc.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/T_PC1_n.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_PC1_ao_r_m_e.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "emissive_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "emissive_strength": 2.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "OmniPBR",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/dollies/dolly/Looks/OmniPBR",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/fof_map_shelf_cart_a_base_d.png",
+          "colorspace": "sRGB"
+        },
+        "normal": {
+          "file": "textures/fof_map_shelf_cart_a_base_n.png",
+          "colorspace": "Non-Color"
+        },
+        "roughness": {
+          "file": "textures/fof_map_shelf_cart_a_base_roughness.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "albedo_add": 0.0,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {},
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_RackSetC_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/rack/frame/Looks/MI_RackSetC_01",
+      "mdl_module": "MI_CeilingA_06b",
+      "template": "ue4_mask_lerp",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_RackSetA_03_D.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_RackSetA_03_M.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_RackSetA_03_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_RackSetA_03_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.07999999821186066,
+          0.14000000059604645,
+          0.11999999731779099
+        ]
+      },
+      "uv": {
+        "scale": [
+          1.0,
+          1.0
+        ]
+      },
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_RackSetB_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/rack/frame/Looks/MI_RackSetB_01",
+      "mdl_module": "MI_CeilingA_06b",
+      "template": "ue4_mask_lerp",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_RackSetA_02_D.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_RackSetA_02_M.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_RackSetA_02_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_RackSetA_02_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.07999999821186066,
+          0.14000000059604645,
+          0.11999999731779099
+        ]
+      },
+      "uv": {
+        "scale": [
+          1.0,
+          1.0
+        ]
+      },
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_RackSetC_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/rack/shelf/Looks/MI_RackSetC_01",
+      "mdl_module": "MI_CeilingA_06b",
+      "template": "ue4_mask_lerp",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_RackSetA_03_D.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_RackSetA_03_M.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_RackSetA_03_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_RackSetA_03_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.14499999582767487,
+          0.14499999582767487,
+          0.14499999582767487
+        ]
+      },
+      "uv": {
+        "scale": [
+          1.0,
+          1.0
+        ]
+      },
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_RackSetD_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/rack/shelf/Looks/MI_RackSetD_01",
+      "mdl_module": "MI_CeilingA_06b",
+      "template": "ue4_mask_lerp",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_RackSetA_04_D.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_RackSetA_04_M.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_RackSetA_04_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_RackSetA_04_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_min": 0.10000000149011612,
+        "roughness_max": 0.8999999761581421,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.14499999582767487,
+          0.14499999582767487,
+          0.14499999582767487
+        ]
+      },
+      "uv": {
+        "scale": [
+          1.0,
+          1.0
+        ]
+      },
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "MI_RackSetA_01",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/rack/shelf/Looks/MI_RackSetA_01",
+      "mdl_module": "MI_CeilingA_06b",
+      "template": "ue4_mask_lerp",
+      "sources": [
+        "mdl_module",
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/T_RackSetA_01_D.png",
+          "colorspace": "sRGB"
+        },
+        "mask": {
+          "file": "textures/T_RackSetA_01_M.png",
+          "colorspace": "Non-Color"
+        },
+        "normal": {
+          "file": "textures/T_RackSetA_01_N.png",
+          "colorspace": "Non-Color"
+        },
+        "orm": {
+          "file": "textures/T_RackSetA_01_ORM.png",
+          "colorspace": "Non-Color"
+        }
+      },
+      "constants": {
+        "roughness_min": -0.06513799726963043,
+        "roughness_max": 0.8999999761581421,
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0,
+        "texture_tint": [
+          0.30000001192092896,
+          0.05000000074505806,
+          0.009999999776482582
+        ]
+      },
+      "uv": {
+        "scale": [
+          1.0,
+          1.0
+        ]
+      },
+      "flags": {},
+      "warnings": []
+    },
+    {
+      "name": "Tape_Stripes",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/tapes/office_floor_tape/Looks/Tape_Stripes",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/tape_striping.jpg",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          4.0,
+          1.0
+        ],
+        "rotate": 90.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "Tape_Stripes_Horiz",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/tapes/office_floor_tape/Looks/Tape_Stripes_Horiz",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/tape_striping.jpg",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          5.0,
+          1.0
+        ],
+        "rotate": 0.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "Tape_Stripes",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/tapes/shelf_floor_tape/Looks/Tape_Stripes",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/tape_striping.jpg",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          11.0,
+          1.0
+        ],
+        "rotate": 90.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "Tape_Stripes_Horiz",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/tapes/shelf_floor_tape/Looks/Tape_Stripes_Horiz",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/tape_striping.jpg",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          2.5,
+          1.0
+        ],
+        "translate": [
+          0.0,
+          0.0
+        ],
+        "rotate": -180.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    },
+    {
+      "name": "striping",
+      "prim_path": "/World/small_warehouse_digital_twin/Assets/tapes/tape_roll/SM_duct_tape_01_root/striping",
+      "mdl_module": "OmniPBR",
+      "template": "omni_pbr",
+      "sources": [
+        "usd_inputs"
+      ],
+      "textures": {
+        "basecolor": {
+          "file": "textures/tape_striping.jpg",
+          "colorspace": "sRGB"
+        }
+      },
+      "constants": {
+        "base_color": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "roughness": 0.5,
+        "metallic": 0.0,
+        "opacity": 1.0
+      },
+      "uv": {
+        "scale": [
+          2.0,
+          0.10000000149011612
+        ],
+        "rotate": -45.0
+      },
+      "flags": {
+        "project_uvw": false,
+        "world_or_object": false
+      },
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+schema_version = "1.0.0"
+
+id = "isaac_usd_importer"
+version = "1.0.0"
+name = "Isaac Sim USD Importer"
+tagline = "Import Isaac Sim USD with MDL materials converted to Blender nodes"
+maintainer = "Yosi Refaeli"
+type = "add-on"
+
+license = ["SPDX:GPL-3.0-or-later"]
+
+blender_version_min = "4.5.0"
+
+tags = ["Import-Export", "Material"]
