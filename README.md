@@ -6,9 +6,11 @@ NVIDIA Isaac Sim **Digital Twin Warehouse** exported to **Blender 5.0**, with an
 
 ![LiDAR layer, room camera](docs/media/lidar_room.gif)
 
-| Beauty, aisle camera | Sensor-mounted fisheye, LiDAR layer |
-|---|---|
-| ![aisle](docs/media/aisle.gif) | ![sensor](docs/media/stills/Scan_Camera_lidar_f450.jpg) |
+![Aisle camera, beauty, frames 120-800](docs/media/aisle.gif)
+*Aisle camera, beauty, frames 120-800*
+
+![Top-down follow, robot path](docs/media/topdown.gif)
+*Top-down follow, robot path*
 
 Full-quality clips: [aisle](docs/media/aisle.mp4) · [top-down follow](docs/media/topdown.mp4) · [room LiDAR](docs/media/lidar_room.mp4) · [sensor LiDAR](docs/media/sensor_lidar.mp4) · [sensor beauty](docs/media/sensor_beauty.mp4)
 
